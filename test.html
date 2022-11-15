@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<style>
+			body, html {
+				position: relative;
+				margin: 0;
+				padding: 0;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-size: 1rem;
+			}
+
+			p {
+				padding: 0;
+				margin: 0;
+				white-space: nowrap;
+			}
+
+			nav {
+				position: relative;
+				height: 90px;
+				width: 100%;
+				top: 0;
+				left: 0;
+				margin: 0;
+				padding: 0;
+				box: border-box;
+				border-bottom: 1px solid #efefef;
+				display: flex;
+				z-index: 100;
+				background: linear-gradient(45deg, #F8F8F8 -5.43%, #FFFFFF 54.57%);
+			}
+
+			.logo-con {
+				position: relative;
+				display: flex;
+				height: 100%;
+				padding: 0px 20px 0px 10px;
+				border-right: 1px solid #efefef;
+			}
+
+			.img-con {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 30%;
+				padding: 10px;
+			}
+
+			.title-con {
+				width: 80%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: left;
+				
+			}
+
+			.title-con > .heading {
+				color: #3d73ff;
+			}
+
+			.title-con > .sub {
+				font-size: .8rem;
+			}
+
+			.logo-con img {
+				width: 60px;
+				height: 60px;
+			}
+
+			footer {
+				position: relative;
+				height: 100px;
+				width: 100%;
+				border-top: 1px solid #efefef;
+				margin-top: 10px;
+				padding: 10px;
+				bottom: 0;
+			}
+
+			footer > p {
+				color: #363636;
+			}
+
+		</style>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<nav>
+			<div class="logo-con">
+				<div class="img-con">
+					<img src="./public/assets/img/logo.png" />
+				</div>
+				<div class="title-con">
+					<p class="heading">Quezon City University</p>
+					<p class="sub">E - Services</p>
+				</div>
+			</div>
+
+		</nav>
+
+		<footer>
+			<p>© Quezon City University - 2022</p>
+		</footer>
+	</body>
+</html>

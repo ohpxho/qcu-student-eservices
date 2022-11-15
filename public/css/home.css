@@ -1,0 +1,46 @@
+/*** index ***/
+.hm-con {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.hm-login-con {
+	height: 100%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hm-login-form-con {
+	height: 500px;
+	width: 500px;	
+}
+
+
+.hm-login-form-head-con {
+	color: var(--clr-accent);
+	font-size: var(--fs-heading);
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+.hm-login-form-head-con hr{
+	margin-top: 10px;
+	width: 80%;
+	border: 0;
+	border-top: 1px solid var(--border-clr);
+}
+
+.hm-cover-con {
+	height: 100%;
+	width: 50%;
+	background-color: var(--clr-accent);
+	opacity: .5;
+}
+
+/*** overview ***/

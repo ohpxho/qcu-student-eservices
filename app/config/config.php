@@ -11,9 +11,9 @@
 
 	//paths
 	define('APPROOT', dirname(dirname(__FILE__)));
-	define('URLROOT', 'http://localhost/QCU_EServices');
+	define('URLROOT', 'http://localhost:81/qcu-eservice');
 
 	//site
-	define('SITENAME', 'QCU EServices');
+	define('SITENAME', 'QCU E-Services');
 
 ?>
