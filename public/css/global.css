@@ -1,7 +1,10 @@
 :root {
 	--clr-accent: #3D73FF;
-	
+	--clr-light-accent: #bfd1ff;
+	--clr-bland: #CCCCCC;
+
 	--bg-clr: #FFFFFF;
+
 	--border-clr: #EFEFEF;
 
 	--ff-primary: 'Source Sans Pro', sans-serif;

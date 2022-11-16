@@ -1,7 +1,7 @@
 <nav class="s-nav">
 	<ul class="s-nav-list">
 		<li>
-			<img src="#" />
+			<img src="<?php echo URLROOT; ?>/public/assets/img/clock.png" />
 			<div>
 				<span>November 30, 2022</span></br>
 				<span>8:00:00 AM</span>

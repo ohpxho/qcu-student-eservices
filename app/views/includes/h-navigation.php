@@ -26,12 +26,12 @@
 		</ul>
 
 		<div class="h-nav-profile-con">
-			<img src="#" />
+			<img src="" />
 			<span><?php echo $_SESSION['fname'] ?></span>
-			<span id="prof-md-btn"><img src="#"></span>
+			<div id="prof-md-btn"></div>
 			<div class="h-nav-profile-md-con">
-				<a href=""><img src="#"><span>Profile Setting</span></a>
-				<a href="<?php echo URLROOT;?>/home/logout"><img src="#"><span>Logout</span></a>
+				<a href=""><img src="<?php echo URLROOT; ?>/public/assets/img/profile.png"><span>Profile Setting</span></a>
+				<a href="<?php echo URLROOT;?>/home/logout"><img src="<?php echo URLROOT; ?>/public/assets/img/logout.png"><span>Logout</span></a>
 			</div>
 		</div>
 	

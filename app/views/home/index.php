@@ -29,9 +29,9 @@
 					?>
 
 					<form action="<?php echo URLROOT; ?>/home/index" method="POST">
-						<span>Registered ID*</span><br/>
-						<input type="text" name="id"><br/>
-						<span>Password*</span><br/>
+						<span>Registered ID<span>*</span></span><br/>
+						<input type="text" name="id"><br/><br/>
+						<span>Password<span>*</span></span><br/>
 						<input type="password" name="pass"><br/>
 						<div>	
 							<input type="submit" text="Login" value="Login"/>

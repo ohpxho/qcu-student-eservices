@@ -1,10 +1,10 @@
 /*icon -> #525252*/
-.hactive {
+.hactive, .sactive {
 	color: var(--clr-accent);
 	background-color: var(--border-clr);
 }
 
-.hactive img{
+.hactive img, .sactive img{
 	filter: invert(35%) sepia(79%) saturate(1967%) hue-rotate(212deg) brightness(100%) contrast(103%)
 }
 
@@ -17,9 +17,18 @@
 	bottom: 0;
 }
 
+.sactive::before {
+	position: absolute;
+	content: '';
+	background-color: var(--clr-accent);
+	height: 100%;
+	width: 3px;
+	left: 0
+}
+
 /*** h navigation  ***/
 .h-nav {
-	height: 80px;
+	height: 6rem;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -82,14 +91,36 @@
 	align-items: center;
 	cursor: pointer;
 	height: 100%;
+	transition: width 1s ease-in-out;
 }
+
+.h-nav-list li:not(.hactive):hover::before{
+	position: absolute;
+	content: '';
+	background-color: var(--clr-bland);
+	height: 3px;
+	width: 100%;
+	bottom: 0;	
+	animation: width .2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 
 .h-nav-list li:hover {
 	background-color: var(--border-clr);
 }
 
 .h-nav-list li img{
-	height: 27px;
+	height: 25px;
 	width: auto;
 	margin-right: 5px;
 }
@@ -97,7 +128,7 @@
 .h-nav-profile-con {
 	border-left: 1px solid var(--border-clr);
 	height: 100%;
-	width: 150px;
+	width: 180px;
 	display: flex;
 	padding: 10px;
 	justify-content: center;
@@ -105,8 +136,23 @@
 	margin-left: auto;
 }
 
-.h-nav-profile-con span {
-	margin: 0px 5px 0px 5px;
+.h-nav-profile-con > img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: var(--border-clr);
+}
+
+.h-nav-profile-con > span {
+	margin: 0px 10px 0px 10px;
+	margin-left: 15px;
+}
+
+#prof-md-btn {
+	background-color: transparent;
+	border-left: 5px solid transparent;
+  	border-right: 5px solid transparent;
+  	border-top: 7px solid #686868;
 }
 
 .h-nav-profile-md-con {
@@ -120,6 +166,19 @@
 	background-color: white;
 }
 
+.h-nav-profile-md-con img{
+	height: 20px;
+	width: 20px;
+}
+
+.h-nav-profile-md-con span{
+	margin-left: 10px;
+}
+
+.h-nav-profile-md-con a:hover img{
+	filter: brightness(0) invert(1);
+}
+
 .h-nav-profile-md-con a {
 	padding: 2px;
 	padding-left: 10px;
@@ -128,12 +187,14 @@
 }
 
 .h-nav-profile-md-con a:hover {
-	background-color: var(--border-clr);
+	background-color: var(--clr-accent);
+	color: white;
 }
 
 .h-nav-profile-md-con a:nth-child(1) {
 	border-bottom: 1px solid var(--border-clr);
 }
+
 
 /*** s navigation ***/
 .s-nav {
@@ -159,6 +220,26 @@
 	background-color: var(--border-clr);
 }
 
+.s-nav-list a li:not(.sactive):hover::before {
+	position: absolute;
+	content: '';
+	left: 0;
+	background-color: var(--clr-bland);
+	width: 4px;
+	height: 100%;
+	animation: height .2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes height {
+	0% {
+		height: 0;
+	}
+	100% {
+		height: 100%;
+	}
+}
+
 .s-nav-list a li img{
 	margin-right: 10px;
 }
@@ -166,13 +247,14 @@
 .s-nav-list > li:nth-child(1) {
 	display: flex;
 	padding: 20px 0px;
+	margin-right: 25px;
 	justify-content: center;
 	align-items: center;
 	border-bottom: 1px solid var(--border-clr);
 }
 
 .s-nav-list > li:nth-child(1) img{
-	margin-right: 10px;
+	margin-right: 15px;
 	width: 40px;
 	height: auto;
 }
