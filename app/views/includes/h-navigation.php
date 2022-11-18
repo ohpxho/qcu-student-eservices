@@ -24,17 +24,17 @@
 				endif;
 			?>
 		</ul>
-
 		<div class="h-nav-profile-con">
-			<img src="" />
-			<span><?php echo $_SESSION['fname'] ?></span>
-			<div id="prof-md-btn"></div>
+			<button id="prof-md-btn">
+				<img src="<?php echo $_SESSION['pic']; ?>" />
+				<span><?php echo $_SESSION['fname'] ?></span>
+				<div class="prof-md-arrow"></div>
+			</button>
 			<div class="h-nav-profile-md-con">
-				<a href=""><img src="<?php echo URLROOT; ?>/public/assets/img/profile.png"><span>Profile Setting</span></a>
+				<a href="<?php echo URLROOT; ?>/user/profile"><img src="<?php echo URLROOT; ?>/public/assets/img/profile.png"><span>Profile Setting</span></a>
 				<a href="<?php echo URLROOT;?>/home/logout"><img src="<?php echo URLROOT; ?>/public/assets/img/logout.png"><span>Logout</span></a>
 			</div>
 		</div>
-	
 	<?php 
 		endif;
 	?>

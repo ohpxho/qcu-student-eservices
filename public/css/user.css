@@ -1,0 +1,64 @@
+/*** Profile Setting ***/
+
+.profile-setting-con {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.profile-setting-con > div {
+	width: 700px;
+	padding: 10px;
+	padding-top: 70px;
+}
+
+.profile-setting-con > div > .header{
+	font-size: var(--fs-600);
+	margin-bottom: 15px;
+	font-weight: var(--fw-semi-bold);
+}
+
+.profile-setting-con > div >  hr {
+	border: 0;
+	border-top: 1px solid var(--border-clr);
+}
+
+.profile-id {
+	font-size: var(--fs-heading);
+	font-weight: var(--fw-semi-bold);
+}
+
+.profile-subtext {
+	font-size: var(--fs-secondary);
+}
+
+.profile-setting-con > div > form .form-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.profile-setting-con > div > form .form-group > span {
+	margin: 3px 0 ;
+}
+
+.profile-setting-con > div > form .form-group > input[type="text"] {
+	width: 80%;
+	margin-bottom: 0;
+}
+
+.profile-setting-con > div > form > button {
+	background-color: var(--clr-err);
+	color: white;
+}
+
+.profile-setting-con > div > form > input[type="submit"] {
+	background-color: var(--clr-green);
+	color: white;
+}
+
+
+
+
+

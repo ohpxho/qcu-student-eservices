@@ -38,13 +38,13 @@
 							<a href="#">Forgot password?</a>
 						</div>
 					</form>
-					<p>*For admission purposes please go to this link <a><i><u>QCUAdmission</u></i></a></p>
+					<p>*For admission purposes please go to this link <a href="#"><u>QCUAdmission</u></a></p>
 				</div>
 			</div>
 		
 			<div class="hm-cover-con">
 				<div class="hm-cover-img-con">
-					<img src="" class="cover-img"/>
+					<img src="<?php echo URLROOT; ?>/public/assets/img/qcu.jpg" class="cover-img"/>
 				</div>
 			</div>
 		</div>

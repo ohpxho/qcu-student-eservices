@@ -1,8 +1,10 @@
 :root {
 	--clr-accent: #3D73FF;
 	--clr-light-accent: #bfd1ff;
-	--clr-bland: #CCCCCC;
-
+	--clr-bland: #aaa;
+	--clr-light-bland: #f7f7f7;
+	--clr-green: #2DA44E;
+	--clr-err: #ff5c5c;
 	--bg-clr: #FFFFFF;
 
 	--border-clr: #EFEFEF;
@@ -14,13 +16,13 @@
 	--ff-heading: var(--ff-primary);
 
 	--fw-regular: 400;
-	--fw-semi-bold: 500;
+	--fw-semi-bold: 600;
 	--fw-bold: 700;
 
 	--fs-250: .3rem;
 	--fs-300: .5rem;
 	--fs-450: .8rem;
-	--fs-500: 1rem;
+	--fs-500: .875rem;
 	--fs-550: 1.2rem;
 	--fs-600: 1.5rem;
 	--fs-650: 1.8rem;
@@ -97,4 +99,27 @@ main[role='main'] {
 	height: 100%;
 	min-height: 100%;
 	display: flex;
+}
+
+input[type="text"], input[type="password"] {
+	width: 100%;
+	margin: 5px 0px;
+	padding: 2px 10px;
+	border: 1px solid var(--clr-accent);
+	background-color: var(--clr-light-accent);
+	outline: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+	border: 2px solid var(--clr-accent);
+}
+
+input[type="submit"], button {
+	margin-top: 15px;
+	margin-right: 10px;
+	margin-bottom: 25px;
+	padding: 2px 40px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
 }

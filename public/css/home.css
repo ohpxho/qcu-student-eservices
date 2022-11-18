@@ -1,7 +1,6 @@
 /*** index ***/
 .hm-con {
 	width: 100%;
-	height: 100%;
 	display: flex;
 	flex-direction: row;
 }
@@ -19,30 +18,32 @@
 	width: 500px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;	
 }
 
 
 .hm-login-form-head-con {
 	color: var(--clr-accent);
-	font-size: var(--fs-heading);
+	font-size: var(--fs-600);
 	display: flex;
+	font-weight: var(--fw-semi-bold);
 	flex-direction: column;
-	text-align: center;
-	align-items: center;
 	width: 100%
 }
 
 .hm-login-form-head-con hr{
-	margin-top: 10px;
+	margin-top: 20px;
 	width: 80%;
 	border: 0;
 	border-top: 1px solid var(--border-clr);
 }
 
 .hm-login-form-con form{
-	margin-top: 15px;
+	margin-top: 20px;
 	width: 80%;	
+}
+
+.hm-login-form-con form a:hover{
+	text-decoration: underline;
 }
 
 .hm-login-form-con form > span {
@@ -53,29 +54,9 @@
 	color: red;
 }
 
-
-.hm-login-form-con form > input {
-	width: 100%;
-	margin: 5px 0px;
-	padding: 2px 10px;
-	border: 1px solid var(--clr-accent);
-	background-color: var(--clr-light-accent);
-	outline: none;
-}
-
-.hm-login-form-con form > input:focus {
-	border: 2px solid var(--clr-accent);
-}
-
 .hm-login-form-con input[type="submit"] {
 	background-color: var(--clr-accent);
 	color: white;
-	margin-top: 15px;
-	margin-right: 10px;
-	margin-bottom: 15px;
-	padding: 2px 40px;
-	outline: none;
-	border: none;
 }
 
 .hm-login-wrpane-con {
@@ -91,7 +72,7 @@
 }
 
 .error {
-	color: red;
+	color: var(--clr-err);
 }
 
 .noissue::before {
@@ -106,7 +87,7 @@
 
 .error::before {
 	position: absolute;
-	background-color: red;
+	background-color: var(--clr-err);
 	content: '';
 	left: 0;
 	top: 0;
@@ -116,9 +97,25 @@
 
 
 .hm-cover-con {
+	position: fixed;
+	top: 0;
+	right: 0;
 	height: 100%;
 	width: 50%;
 	background-color: var(--clr-accent);
+	z-index: 200;
+}
+
+.hm-cover-img-con {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+}
+
+.hm-cover-img-con img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	opacity: .5;
 }
 

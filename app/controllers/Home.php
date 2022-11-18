@@ -3,7 +3,7 @@
 	class Home extends Controller {
 
 		public function __construct() {
-			$this->userModel = $this->initModel('User');
+			$this->userModel = $this->initModel('Users');
 		}
 		
 		public function doIndex() {
@@ -60,7 +60,10 @@
 			unset($_SESSION['id']);
 			unset($_SESSION['email']);
 			unset($_SESSION['fname']);
+			unset($_SESSION['mname']);
+			unset($_SESSION['lname']);
 			unset($_SESSION['type']);
+			unset($_SESSION['pic']);
 			unset($_SESSION);
 			header('location:'.URLROOT.'/home/index');
 		}
@@ -68,8 +71,11 @@
 		public function createUserSession($user) {
 			$_SESSION['id'] = $user->id;
 			$_SESSION['email'] = $user->email;
-			$_SESSION['fname'] = $user->fname;	
+			$_SESSION['fname'] = $user->fname;
+			$_SESSION['mname'] = $user->mname;	
+			$_SESSION['lname'] = $user->lname;		
 			$_SESSION['type'] = $user->type;
+			$_SESSION['pic'] = $user->pic;
 		}
 
 		public function isLoginDetailsValid($data) {

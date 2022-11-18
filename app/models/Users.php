@@ -1,6 +1,6 @@
 <?php
 	
-	class User {
+	class Users {
 
 		public function __construct() {
 			$this->db = new Database();
@@ -19,6 +19,10 @@
 			} else {
 				return false;
 			}
+		}
+
+		public function getUserInfo() {
+
 		}
 		
 	}

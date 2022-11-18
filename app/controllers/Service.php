@@ -13,10 +13,32 @@
 				'title' => SITENAME,
 				'ovclass' => '',
 				'svclass' => 'hactive',
-				'apclass' => ''
+				'apclass' => '',
+				'rfdclass' => '',
+				'rficlass' => '',
+				'agcclass' => '',
+				'lpwclass' => '',
 			];
 
 			$this->showView('services/index', $data);
+		}
+
+		public function doRequestForDocument() {
+			redirectIfNotLoggedIn();
+
+			$data = [
+				'title' => SITENAME,
+				'ovclass' => '',
+				'svclass' => 'hactive',
+				'apclass' => '',
+				'rfdclass' => 'sactive',
+				'rficlass' => '',
+				'agcclass' => '',
+				'lpwclass' => '',
+
+			];
+
+			$this->showView('services/rfd', $data);
 		}
 	}
 

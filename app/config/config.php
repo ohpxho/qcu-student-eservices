@@ -11,8 +11,9 @@
 
 	//paths
 	define('APPROOT', dirname(dirname(__FILE__)));
-	define('URLROOT', 'http://localhost:81/qcu-eservice');
-
+	define('PORT', $_SERVER['SERVER_PORT']);
+	define('URLROOT', 'http://localhost:'.PORT.'/qcu-eservice');
+	
 	//site
 	define('SITENAME', 'QCU E-Services');
 

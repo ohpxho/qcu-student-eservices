@@ -7,7 +7,6 @@
 
 		public function __construct() {
 			$url = $this->parseURL();
-			
 			$this->setController($url);
 			$this->setPage($url);
 			$this->setParams($url);
