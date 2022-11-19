@@ -38,3 +38,17 @@ function toggleChangeUserPass() {
 		cancleIcon.style.display = 'none';
 	}
 }
+
+const hnavhamburger = document.querySelector('.h-nav-hamburger-menu');
+hnavhamburger.addEventListener('click', e => {
+	toggleNavigationOption();
+});
+
+function toggleNavigationOption() {
+	const container = document.querySelector('.h-nav-options-con');
+	if(container.style.display == 'none') {
+		container.style.display = 'flex';
+	} else {
+		container.style.display = 'none';
+	}
+}

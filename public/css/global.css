@@ -164,3 +164,16 @@ input[type="submit"], button {
 .success::before {
 	background-color: var(--clr-green);
 }
+
+@media(min-width: 0) {
+
+
+}
+
+@media(min-width: 576px) {
+	
+}
+
+@media(min-width: 900px) {
+	
+}

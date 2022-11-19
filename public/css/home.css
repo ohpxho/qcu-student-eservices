@@ -6,11 +6,7 @@
 }
 
 .hm-login-con {
-	height: 100%;
-	width: 50%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .hm-login-form-con {
@@ -84,3 +80,48 @@
 }
 
 /*** overview ***/
+
+@media(min-width: 0) {
+	.hm-login-con {
+		width: 100%;
+		height: 100%;
+		padding: 20px;
+		margin-top: 20px;
+	}
+	
+	.hm-cover-con {
+		display: none;
+	}
+
+	.hm-login-form-con {
+		height: 300px;
+		width: 400px;
+	}
+
+}
+
+@media(min-width: 576px) {
+	.hm-login-form-con {
+		height: 500px;
+		width: 500px;
+	}
+}
+
+@media(min-width: 900px) {
+	.hm-login-con {
+		width: 50%;
+		justify-content: center;
+		align-items: center;
+		padding-left: 10px;
+		margin-top: 0;
+	}
+
+	.hm-login-form-con {
+		height: 500px;
+		width: 500px;
+	}
+
+	.hm-cover-con {
+		display: flex;
+	}
+}
