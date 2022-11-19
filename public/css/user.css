@@ -39,6 +39,25 @@
 	margin-bottom: 20px;
 }
 
+.profile-setting-con > div > form > .form-group:nth-child(1) {
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+.profile-setting-con > div > form > .form-group:nth-child(1) img{
+	width: 70px;
+	height: auto;
+}
+
+.profile-setting-con > div > form > .form-group:nth-child(1) > div:nth-child(1) {
+	margin-right: 20px;
+}
+
+.profile-setting-con > div > form > .form-group:nth-child(1) > div:nth-last-child(1) {
+	display: flex;
+	flex-direction: column;
+}
+
 .profile-setting-con > div > form .form-group > span {
 	margin: 3px 0 ;
 }
@@ -48,9 +67,11 @@
 	margin-bottom: 0;
 }
 
-.profile-setting-con > div > form > button {
+.profile-setting-con > div > form button {
 	background-color: var(--clr-err);
 	color: white;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .profile-setting-con > div > form > input[type="submit"] {
@@ -58,6 +79,29 @@
 	color: white;
 }
 
+.change-pass-btn-con {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+	align-items: flex-start;
+}		
+
+.change-pass-btn-con > div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.change-pass-btn-con > div > span > img{
+	width: 20px;
+	height: 20px;
+	display: none;
+}
+
+
+.change-pass-form {
+	display: none;
+}
 
 
 

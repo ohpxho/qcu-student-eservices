@@ -15,13 +15,13 @@
 					<?php 
 						if(empty($data['err'])):
 					?>
-							<div class="hm-login-wrpane-con noissue">
+							<div class="wrpane-con noissue">
 								<p>Please login to continue.</p>
 							</div>
 					<?php
 						else:
 					 ?>
-							<div class="hm-login-wrpane-con error">
+							<div class="wrpane-con error">
 								<p><?php echo $data['err']; ?></p>
 							</div>
 					<?php
