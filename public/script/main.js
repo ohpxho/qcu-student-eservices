@@ -4,10 +4,10 @@ profilebtn.addEventListener('click', e => toggleProfileSetting());
 
 function toggleProfileSetting() {
 	const menu = document.querySelector('.h-nav-profile-md-con');
-	if(menu.style.display == 'none') {
-		menu.style.display = 'flex';
+	if(menu.style.display) {
+		menu.style.display = ((menu.style.display != 'none')? 'none' : 'flex');
 	} else {
-		menu.style.display = 'none';
+		menu.style.display = 'flex';
 	}
 }
 
@@ -24,31 +24,34 @@ if(chngepassbtn) {
 function toggleChangeUserPass() {
 	const form = document.querySelector('.change-pass-form');
 	const cancleIcon = document.querySelector('.change-pass-btn-con > div > span > img');
-	if(form.style.display == 'none') {
+	if(form.style.display) {
+		form.style.display = ((form.style.display != 'none') ? 'none' : 'block');
+		cancleIcon.style.display = ((cancleIcon.style.display != 'none')? 'none' : 'block');
+		if(form.style.display == 'none') {
+			const oldpass = document.querySelector('input[name="oldpass"]');
+			const newpass = document.querySelector('input[name="newpass"]');	
+			const confirmpass = document.querySelector('input[name="confirmpass"]');
+			oldpass.value = '';
+			newpass.value = '';
+			confirmpass.value = '';
+				
+		}
+	} else {
 		form.style.display = 'block';
 		cancleIcon.style.display = 'block';
-	} else {
-		const oldpass = document.querySelector('input[name="oldpass"]');
-		const newpass = document.querySelector('input[name="newpass"]');	
-		const confirmpass = document.querySelector('input[name="confirmpass"]');
-		oldpass.value = '';
-		newpass.value = '';
-		confirmpass.value = '';
-		form.style.display = 'none';
-		cancleIcon.style.display = 'none';
 	}
 }
 
-const hnavhamburger = document.querySelector('.h-nav-hamburger-menu');
+const hnavhamburger = document.querySelector('#h-nav-hamburger-btn');
 hnavhamburger.addEventListener('click', e => {
 	toggleNavigationOption();
 });
 
 function toggleNavigationOption() {
 	const container = document.querySelector('.h-nav-options-con');
-	if(container.style.display == 'none') {
-		container.style.display = 'flex';
+	if(container.style.display) {
+		container.style.display = ((container.style.display != 'none') ? 'none' : 'flex');
 	} else {
-		container.style.display = 'none';
+		container.style.display = 'flex';
 	}
 }

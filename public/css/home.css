@@ -28,14 +28,14 @@
 
 .hm-login-form-head-con hr{
 	margin-top: 20px;
-	width: 80%;
+	width: 100%;
 	border: 0;
 	border-top: 1px solid var(--border-clr);
 }
 
 .hm-login-form-con form{
 	margin-top: 20px;
-	width: 80%;	
+	width: 100%;	
 }
 
 .hm-login-form-con form a:hover{
@@ -94,17 +94,13 @@
 	}
 
 	.hm-login-form-con {
-		height: 300px;
-		width: 400px;
+		height: 100%;
+		width: 100%;
 	}
 
 }
 
 @media(min-width: 576px) {
-	.hm-login-form-con {
-		height: 500px;
-		width: 500px;
-	}
 }
 
 @media(min-width: 900px) {

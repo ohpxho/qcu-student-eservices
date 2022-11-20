@@ -12,7 +12,7 @@
 	<?php
 		if(isLoggedIn()):
 	?>
-		<div class="h-nav-hamburger-menu"></div>
+		<button id="h-nav-hamburger-btn"><div class="h-nav-hamburger-menu"></div></button>
 		<div class="h-nav-options-con">
 			<ul class="h-nav-list">
 				<?php
