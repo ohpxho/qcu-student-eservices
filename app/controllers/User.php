@@ -10,16 +10,16 @@
 			redirectIfNotLoggedIn();
 			
 			$data = [
-					'title' => SITENAME,
-					'ovclass' => '',
-					'svclass' => '',
-					'apclass' => '',
-					'rfdclass' => '',
-					'rficlass' => '',
-					'agcclass' => '',
-					'lpwclass' => '',
-					'err' => '',
-					'success' => ''
+				'title' => SITENAME,
+				'ovclass' => '',
+				'svclass' => '',
+				'apclass' => '',
+				'rfdclass' => '',
+				'rficlass' => '',
+				'agcclass' => '',
+				'lpwclass' => '',
+				'err' => '',
+				'success' => ''
 			];
 
 			if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -84,7 +84,7 @@
  			   return 'Email is invalid. Please try again.';
 			}
 
-			if(!$this->userModel->findUSerByEmail($user['email'])) {
+			if($this->userModel->findUSerByEmail($user['email'])) {
 				return 'Email is already in use.';
 			}
 

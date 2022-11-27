@@ -172,7 +172,7 @@
 
 /*** service content ***/
 
-.service-main-con {
+.dep-service-main-con {
 	position: relative;
 	width: 100%;
 	height: 200%;
@@ -180,7 +180,7 @@
 
 }
 
-.service-content-con {
+.dep-service-content-con {
 	width: 100%;	
 }
 

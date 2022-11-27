@@ -4,7 +4,7 @@
 			<img src="<?php echo URLROOT.'/public/assets/img/logo.png' ?>" />
 		</div>
 		<div class="h-nav-title-con">
-			<p>Quezon City University</p>
+			<a href="<?php echo URLROOT; ?>/home"><p>Quezon City University</p></a>
 			<p>E - Services</p>
 		</div>
 	</div>

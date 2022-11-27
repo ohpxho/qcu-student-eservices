@@ -1,0 +1,40 @@
+user account
+id 
+email
+pass
+pic
+type
+createdAt
+approve
+block
+
+account eval
+id 
+email
+evaluatedAt
+reason of rejection
+
+blacklisted
+id
+email
+reason
+date
+
+student 
+id
+email 
+lastname
+firstname
+middlename
+course
+section
+contact
+branch
+year
+street
+city
+state
+status
+zip 
+qc resident
+type

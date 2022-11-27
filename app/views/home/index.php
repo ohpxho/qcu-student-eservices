@@ -29,13 +29,14 @@
 					?>
 
 					<form action="<?php echo URLROOT; ?>/home/index" method="POST">
-						<span>Registered ID<span>*</span></span><br/>
+						<span>Registered ID/Email<span>*</span></span><br/>
 						<input type="text" name="id"><br/><br/>
 						<span>Password<span>*</span></span><br/>
 						<input type="password" name="pass"><br/>
 						<div>	
 							<input type="submit" text="Login" value="Login"/>
-							<a href="#">Forgot password?</a>
+							<a class="create-acc-link" href="<?php echo URLROOT; ?>/home/registration" >Create account</a>
+							<a class="forgot-pass-link" href="#">Forgot password?</a>
 						</div>
 					</form>
 					<p>*For admission purposes please go to this link <a href="#"><u>QCUAdmission</u></a></p>

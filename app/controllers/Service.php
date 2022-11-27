@@ -14,32 +14,23 @@
 				'ovclass' => '',
 				'svclass' => 'hactive',
 				'apclass' => '',
-				'rfdclass' => '',
-				'rficlass' => '',
-				'agcclass' => '',
-				'lpwclass' => '',
+				'idclass' => '',
+				'borrowclass' => '',
+				'repairclass' => '',
+				'returnclass' => '',
+				'admissionclass' => '',
+				'acadclass' => '',
+				'lackclass' => '',
+				'councellingclass' => '',
+				'moralclass' => '',
+				'tuitionclass' => '',
+				'oopclass' => '',
+				'department' => '',
 			];
 
 			$this->showView('services/index', $data);
 		}
-
-		public function doRequestForDocument() {
-			redirectIfNotLoggedIn();
-
-			$data = [
-				'title' => SITENAME,
-				'ovclass' => '',
-				'svclass' => 'hactive',
-				'apclass' => '',
-				'rfdclass' => 'sactive',
-				'rficlass' => '',
-				'agcclass' => '',
-				'lpwclass' => '',
-
-			];
-
-			$this->showView('services/rfd', $data);
-		}
+		
 	}
 
 ?>

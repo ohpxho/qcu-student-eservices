@@ -46,6 +46,9 @@
 	margin: 5px 0px;
 }
 
+.hm-login-form-con form > div {
+}
+
 .hm-login-form-con form > span span {
 	color: red;
 }
@@ -55,6 +58,21 @@
 	color: white;
 }
 
+.create-acc-link {
+	background-color: var(--border-clr);
+	padding: 5px 15px;
+	border-radius: 5px;
+}
+
+.create-acc-link:hover {
+	text-decoration: none !important;
+	background-color: var(--border-clr);
+}
+
+.forgot-pass-link {
+	float: right;
+	margin-top: 17px;	
+}
 
 .hm-cover-con {
 	position: fixed;
@@ -79,6 +97,175 @@
 	opacity: .5;
 }
 
+/*** registration ***/
+.registration-main {
+	display: flex;
+	justify-content: center;
+}
+
+.registration-con {
+	display: flex;
+	flex-direction: column;
+}
+
+.registration-con .steps-con {
+	display: flex;
+	padding: 10px;
+	width: 100%;
+	margin-top: 20px;
+	justify-content: center;
+}
+
+.registration-con .steps-con > div{
+	margin: 0 5px;
+	height: 35px;
+	padding: 0 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--clr-bland);
+}	
+
+.registration-con .steps-con > div::before {
+	content: '';
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: -7px;
+    top: -1px;
+    background-color: var(--bg-clr);
+    z-index:50;
+    
+    -webkit-transform: translate(-10px,4px) rotate(45deg);
+       -moz-transform: translate(-10px,4px) rotate(45deg);
+        -ms-transform: translate(-10px,4px) rotate(45deg);
+         -o-transform: translate(-10px,4px) rotate(20deg);
+            transform: translate(-10px,4px) rotate(45deg);
+}
+
+.registration-con .steps-con > div::after {
+	content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: -3px;
+    top: 1px;
+    background-color: var(--clr-bland);
+    z-index: 150;
+    
+    -webkit-transform: translate(10px,4px) rotate(45deg);
+       -moz-transform: translate(10px,4px) rotate(45deg);
+        -ms-transform: translate(10px,4px) rotate(45deg);
+         -o-transform: translate(10px,4px) rotate(20deg); 
+            transform: translate(10px,4px) rotate(45deg);
+}
+
+.registration-con .steps-con  > .step.active {
+	background-color: var(--clr-accent);
+	color: white;
+}
+
+.registration-con .steps-con  > div > span {
+}
+
+.registration-con .steps-con  > div.active::after {
+	background-color: var(--clr-accent);	
+}
+
+.registration-con .registration-form-con {
+	
+}
+
+.registration-con > .wrpane-con {
+	display: none;
+}
+
+.registration-form-con {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.registration-form-con > form {
+	width: 100%;
+}
+
+.registration-form-con > form  div > .two-form-group, .registration-form-con > form  div > .three-form-group, .registration-form-con > form div > .form-group {
+	margin-bottom: 10px;
+}  
+
+.registration-con .registration-form-con .two-form-group, .registration-form-con > form  div > .three-form-group{
+	display: flex;
+}
+
+.registration-con .registration-form-con .two-form-group .form-group{
+	width: 50%;
+}
+
+.registration-form-con > form  div > .three-form-group .form-group {
+	width: 35%;
+}
+
+.registration-form-con > form  div > .three-form-group .form-group:nth-child(2) {
+	margin: 0 5px;
+}
+
+.registration-con .registration-form-con .two-form-group .form-group:nth-child(1) {
+	margin-right: 10px;
+}
+
+.reg-btn-con {
+	dipslay: flex;
+	width: 100%;
+}
+
+.reg-next-btn {
+	background-color: var(--clr-accent);
+	color: white;
+	cursor: pointer;	
+}
+
+.reg-back-btn {
+	background-color: var(--clr-err);
+	color: white;
+	cursor: pointer;
+}
+
+.reg-submit-btn {
+	background-color: var(--clr-bland-light);
+	cursor: pointer;
+}
+
+.account-details-con {
+	display: block;
+}
+
+.student-details-con {
+	display: none;
+	margin-bottom: 20px;
+}
+
+.terms-condition-con {
+	display: none;
+	width: 100%;
+}
+
+.terms-condition {
+	border: 1px solid var(--border-clr);
+	width: 100%;
+	padding: 15px;
+	overflow: scroll;
+	min-height: 300px;
+	max-height: 350px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	background-color: var(--clr-light-bland);
+}
+
+.wrpane-con.success.register, .wrpane-con.err.register {
+	display: block;
+}
+
 /*** overview ***/
 
 @media(min-width: 0) {
@@ -98,6 +285,10 @@
 		width: 100%;
 	}
 
+	.registration-con {
+		width: 100%;
+		padding: 0 10px;
+	}
 }
 
 @media(min-width: 576px) {
@@ -119,5 +310,10 @@
 
 	.hm-cover-con {
 		display: flex;
+	}
+
+	.registration-con {
+		width: 50%;
+		padding: 0;
 	}
 }
