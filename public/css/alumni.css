@@ -1,0 +1,44 @@
+.alumni-id-modal-con {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.2);
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+
+.alumni-id-modal {
+	background-color: white;
+	padding: 15px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.alumni-id-modal button {
+	background-color: var(--clr-accent);
+	color: white;
+	margin-bottom: 0;
+}
+
+@media(min-width: 0) {
+	.alumni-id-modal {
+		width: 400px;
+		min-height: 200px;
+	}
+}
+
+@media(min-width: 576px) {
+	
+}
+
+@media(min-width: 900px) {
+	.alumni-id-modal {
+		width: 400px;
+		min-height: 200px;
+	}
+}

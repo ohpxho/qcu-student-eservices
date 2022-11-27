@@ -114,7 +114,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 	border: 2px solid var(--clr-accent);
 }
 
-input[type="submit"], button, a[data="button"] {
+input[type="submit"], button, a[data-type="button"] {
 	margin-top: 15px;
 	margin-right: 10px;
 	margin-bottom: 25px;
@@ -124,7 +124,7 @@ input[type="submit"], button, a[data="button"] {
 	border-radius: 5px;
 }
 
- a[data="button"] {
+ a[data-type="button"] {
  	padding: 3.5px 10px;
  }
 

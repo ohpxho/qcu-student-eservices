@@ -14,9 +14,7 @@
 				'ovclass' => '',
 				'svclass' => '',
 				'apclass' => '',
-				'rfdclass' => '',
-				'rficlass' => '',
-				'agcclass' => '',
+				'rqclass' => '',
 				'lpwclass' => '',
 				'err' => '',
 				'success' => ''

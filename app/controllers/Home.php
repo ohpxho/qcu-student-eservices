@@ -4,6 +4,7 @@
 
 		public function __construct() {
 			$this->userModel = $this->initModel('Users');
+			$this->studentModel = $this->initModel('Students');
 		}
 		
 		public function doIndex() {
@@ -138,6 +139,7 @@
 				'ovclass' => 'hactive',
 				'svclass' => '',
 				'apclass' => '',
+				'rqclass' => '',
 			];
 
 			$this->showView('home/overview', $data);
@@ -147,8 +149,6 @@
 			unset($_SESSION['id']);
 			unset($_SESSION['email']);
 			unset($_SESSION['fname']);
-			unset($_SESSION['mname']);
-			unset($_SESSION['lname']);
 			unset($_SESSION['type']);
 			unset($_SESSION['pic']);
 			unset($_SESSION);
@@ -158,9 +158,13 @@
 		public function createUserSession($user) {
 			$_SESSION['id'] = $user->id;
 			$_SESSION['email'] = $user->email;
-			$_SESSION['fname'] = $user->fname;
-			$_SESSION['mname'] = $user->mname;	
-			$_SESSION['lname'] = $user->lname;		
+			if($user->type == 'student') {
+				$student = $this->studentModel->findUSerById($user->id);
+				print($student->fname);
+				$_SESSION['fname'] = $student->fname;		
+			} else {
+				$_SESSION['fname'] = 'Admin';	
+			}
 			$_SESSION['type'] = $user->type;
 			$_SESSION['pic'] = $user->pic;
 		}

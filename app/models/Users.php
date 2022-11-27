@@ -8,11 +8,7 @@
 
 		public function login($id, $pass) {
 			$email = $id;
-			$this->db->query("SELECT users.*, student.lname, student.mname, student.fname 
-							  FROM users 
-							  INNER JOIN student 
-							  ON users.id=student.id OR users.email=student.email
-							  WHERE users.id=:id or users.email=:email");
+			$this->db->query("SELECT * FROM users WHERE id=:id or email=:email");
 			
 			$this->db->bind(':id', $id);
 			$this->db->bind(':email', $email);
@@ -93,7 +89,7 @@
 			$this->db->bind(':id', $id);
 			$result = $this->db->getSingleResult();
 			if(is_object($result)) {
-				return true;
+				return $result;
 			}
 
 			return false;

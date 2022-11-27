@@ -35,11 +35,12 @@
 						<input type="password" name="pass"><br/>
 						<div>	
 							<input type="submit" text="Login" value="Login"/>
-							<a class="create-acc-link" href="<?php echo URLROOT; ?>/home/registration" >Create account</a>
+							<a class="create-acc-link" href="<?php echo URLROOT; ?>/home/registration" >Create Account</a>
 							<a class="forgot-pass-link" href="#">Forgot password?</a>
 						</div>
 					</form>
-					<p>*For admission purposes please go to this link <a href="#"><u>QCUAdmission</u></a></p>
+					<p>*For alumni, please tap this button <a href="<?php echo URLROOT; ?>/alumni" class="login-alumni-btn" data-type="button">Login As Alumni</a></p><br>
+					<p>*For admission purposes, please go to this link <a href="#"><u>QCUAdmission</u></a></p>
 				</div>
 			</div>
 		

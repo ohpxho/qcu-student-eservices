@@ -46,7 +46,7 @@
 	border-bottom: 1px solid var(--border-clr);
 	display: flex;
 	align-items: center;
-	z-index: 100;
+	z-index: 99;
 	background: linear-gradient(45deg, #F8F8F8 -5.43%, #FFFFFF 54.57%);
 }
 

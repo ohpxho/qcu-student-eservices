@@ -69,6 +69,12 @@
 	background-color: var(--border-clr);
 }
 
+.login-alumni-btn {
+	background-color: var(--clr-accent);
+	color: white;
+	margin-left: 10px;
+}
+
 .forgot-pass-link {
 	float: right;
 	margin-top: 17px;	

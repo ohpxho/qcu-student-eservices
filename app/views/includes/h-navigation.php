@@ -16,10 +16,25 @@
 		<div class="h-nav-options-con">
 			<ul class="h-nav-list">
 				<?php
-					if(whoIsIn() == 'student'):
+					if(!empty(whoIsIn())):
 				?>
 						<a href="<?php echo URLROOT; ?>/home"><li class="<?php echo $data['ovclass']; ?>"><img src="<?php echo URLROOT;?>/public/assets/img/overview.png" /> Overview</li></a>
-						<a href="<?php echo URLROOT; ?>/service"><li class="<?php echo $data['svclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/services.png" /> Services</li></a>
+						<?php
+							if(whoIsIn() == 'student'):
+						?>	
+								<a href="<?php echo URLROOT; ?>/service"><li class="<?php echo $data['svclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/services.png" /> Services</li></a>
+						<?php
+							endif;
+						?>
+
+						<?php
+							if(whoIsIn() != 'student'):
+						?>	
+								<a href="<?php echo URLROOT; ?>/request"><li class="<?php echo $data['rqclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/services.png" /> Request</li></a>
+						<?php
+							endif;
+						?>
+
 						<a href="<?php echo URLROOT; ?>/appointment"><li class="<?php echo $data['apclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/appointment.png"/> Appointment</li></a>
 				<?php
 					endif;

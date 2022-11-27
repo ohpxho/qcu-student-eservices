@@ -56,7 +56,7 @@
 							</div>
 						</div>
 						<div class="reg-btn-con">
-							<a data="button" class="reg-next-btn" id="next-to-std-det">Next</a>	
+							<a data-type="button" class="reg-next-btn" id="next-to-std-det">Next</a>	
 						</div>
 					</div>
 
@@ -146,8 +146,8 @@
 							</div>	
 						</div>
 						<div class="reg-btn-con">
-							<a data="button" class="reg-back-btn" id="back-to-acc-det">Back</a>
-							<a data="button" class="reg-next-btn" id="next-to-terms-cond">Next</a>	
+							<a data-type="button" class="reg-back-btn" id="back-to-acc-det">Back</a>
+							<a data-type="button" class="reg-next-btn" id="next-to-terms-cond">Next</a>	
 						</div>
 					</div>
 					
@@ -163,7 +163,7 @@
 							<span>I am giving my consent to QCU from what is stated above.</span>
 						</div>
 						<div class="reg-btn-con">
-							<a data="button" class="reg-back-btn" id="back-to-std-det">Back</a>
+							<a data-type="button" class="reg-back-btn" id="back-to-std-det">Back</a>
 							<input type="submit" class="reg-submit-btn" value="Submit" disabled>
 						</div>
 					</div>

@@ -24,7 +24,7 @@
 				?>
 
 				<p class="profile-id">#<?php echo $_SESSION['id']; ?></p>
-				<span class="profile-subtext">Student ID is fixed and cannot be edited.</span>
+				<span class="profile-subtext">ID is fixed and cannot be edited.</span>
 				<br /><br/>
 				<form action="<?php echo URLROOT; ?>/user/profile" method="POST" enctype="multipart/form-data">
 					
@@ -40,23 +40,23 @@
 
 					<div class="form-group">
 						<span>Firstname</span>
-						<input type="text" name="fname" value="<?php echo $_SESSION['fname'] ?>"/>
+						<input type="text" name="fname" value=""/>
 					</div>
 					
 					<div class="form-group">
 						<span>Middlename</span>
-						<input type="text" name="mname" value="<?php echo $_SESSION['mname'] ?>"/>
+						<input type="text" name="mname" value=""/>
 						<span class="profile-subtext">Optional, just in case you don't have any middlename.</span>
 					</div>
 
 					<div class="form-group">
 						<span>Lastname</span>
-						<input type="text" name="lname" value="<?php echo $_SESSION['lname'] ?>"/>
+						<input type="text" name="lname" value=""/>
 					</div>
 					
 					<div class="form-group">
 						<span>Email</span>
-						<input type="text" name="email" value="<?php echo $_SESSION['email'] ?>"/>
+						<input type="text" name="email" value=""/>
 						<span class="profile-subtext">This will be the email used for any transactions within the university.</span>
 					</div>
 					
