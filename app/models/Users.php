@@ -126,7 +126,27 @@
 			$result = $this->db->getAllResult();
 			return $result;
 		}
+
+		public function updateApproveAttr($data) {
+			$this->db->query("UPDATE users SET approve=:approve WHERE id=:id");
+			$this->db->bind(':approve', $data['action']);
+			$this->db->bind(':id', $data['id']);
+			$user_result = $this->db->execute();
+
+			$this->db->query("INSERT INTO account_eval (id, email, reason_of_refusal) VALUES (:id, :email, :reason)");
+			$this->db->bind(':id', $data['id']);
+			$this->db->bind(':email', $data['email']);
+			$this->db->bind(':reason', $data['reason']);
+			$eval_result = $this->db->execute();
+
+			if($user_result && $eval_result) {
+				return true;
+			}
+
+			return false;			
+		}
 		
+
 	}
 
 ?>

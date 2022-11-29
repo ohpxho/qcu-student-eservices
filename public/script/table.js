@@ -1,10 +1,11 @@
 
 $(document).ready(function() {
-	$('#std-acc-app-btn').click(function() {
-
-	});
-
-	$('#std-rej-app-btn').click(function() {
-
-	});
+	$('#filter-form-toggler').click(function() {
+		const form = document.querySelector('.filter-form-con');
+		if(form.style.display) {
+			form.style.display = (form.style.display != 'none')? 'none' : 'block'; 
+		} else {
+			form.style.display = 'block'
+		}
+	})
 });

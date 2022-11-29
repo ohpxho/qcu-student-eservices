@@ -155,12 +155,9 @@
 				'lackclass' => '',
 				'acadclass' => '',
 				'admissionclass' => '',
-				'evalclass' => 'sactive',
-				'students' => ''
+				'evalclass' => 'sactive'
 			];
 
-			$students = $this->userModel->fetchAllPendingStudent();
-			$data['students'] = $students;
 			$this->showView('registrar/evaluation', $data);
 		}
 

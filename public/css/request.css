@@ -5,5 +5,55 @@
 }
 
 #std-acc-rej-btn {
+	background-color: var(--clr-err);
+	color: white;
+}
+
+.std-acc-rej-link {
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.rej-stud-acc-modal-con {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	background-color: transparent;
+	z-index: 99;
+	border: 1px solid var(--border-clr);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.rej-stud-acc-modal {
+	width: 400px;
+	border: 1px solid var(--border-clr);
+	height: 230px;
+	background-color: white;
+	padding: 20px;
+}
+
+.rej-stud-acc-modal > textarea {
+	min-width: 340px;
+	max-width: 340px;
+	min-height: 95px;
+	max-height: 95px;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.rej-stud-acc-modal > button {
+	margin: 0;
+}
+
+.rej-stud-acc-modal > p:nth-child(1) {
+	font-weight: var(--fw-semi-bold);
+}
+
+.rej-stud-acc-modal > a {
+	cursor: pointer;
+	margin-left: 5px;
 }

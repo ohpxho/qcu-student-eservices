@@ -108,25 +108,56 @@
 		}
 
 
-		public function doSearch() {
+		public function doFilter() {
 			redirectIfNotLoggedIn();
 
 			if($_SERVER['REQUEST_METHOD'] == 'POST') {
 				$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
 				$target = trim($post['target']);
+				$filters = $post['filters'];
+				$order = $post['order'];
 
-				$result = $this->studentModel->searchStudents($target);
+				$result = $this->studentModel->searchStudents($target, $filters, $order);
 				
 				if(is_array($result) || is_object($result)) {
 					echo json_encode($result);
 					return;
 				}
+
 				echo '';
 				return;
 			}
 		}
 
+
+		public function doUpdateApproveAttr() {
+			redirectIfNotLoggedIn();
+
+			if($_SERVER['REQUEST_METHOD'] == 'POST') {
+				$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+				$id = trim($post['id']);
+				$email = trim($post['email']);
+				$action = trim($post['action']);
+				$reason = trim($post['reason']);
+				$data = [
+					'id' => $id, 
+					'email' => $email,
+					'action' => $action,
+					'reason' => $reason
+				];
+
+				$result = $this->userModel->updateApproveAttr($data);
+				if($result) {
+					echo json_encode(true);
+					return;
+				}
+
+				echo json_encode(false);
+				return;
+			}
+		}
 	}
 
 
