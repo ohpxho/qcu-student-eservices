@@ -5,7 +5,7 @@
 		</div>
 		<div class="h-nav-title-con">
 			<a href="<?php echo URLROOT; ?>/home"><p>Quezon City University</p></a>
-			<p>E - Services</p>
+			<p>Student E-Services</p>
 		</div>
 	</div>
 
@@ -30,12 +30,12 @@
 						<?php
 							if(whoIsIn() != 'student'):
 						?>	
-								<a href="<?php echo URLROOT; ?>/request"><li class="<?php echo $data['rqclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/services.png" /> Request</li></a>
+								<a href="<?php echo URLROOT; ?>/request"><li class="<?php echo $data['rqclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/services.png" />Student Requests</li></a>
 						<?php
 							endif;
 						?>
 
-						<a href="<?php echo URLROOT; ?>/appointment"><li class="<?php echo $data['apclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/appointment.png"/> Appointment</li></a>
+						<a href="<?php echo URLROOT; ?>/appointment"><li class="<?php echo $data['apclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/appointment.png"/> Appointments</li></a>
 				<?php
 					endif;
 				?>

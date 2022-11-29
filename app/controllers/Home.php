@@ -220,7 +220,7 @@
 			}
 
 			if($this->userModel->findUSerById($data['id'])) {
-				return 'Student already exist.';
+				return 'User already exist.';
 			}
 
 			if($this->userModel->findUSerByEmail($data['email'])) {

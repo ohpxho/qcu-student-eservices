@@ -23,6 +23,7 @@
 	background-color: var(--clr-accent);
 	color: white;
 	margin-bottom: 0;
+	margin-right: 0;
 }
 
 @media(min-width: 0) {

@@ -175,7 +175,7 @@
 .dep-service-main-con {
 	position: relative;
 	width: 100%;
-	height: 200%;
+	height: 100%;
 	display: flex;
 
 }
@@ -206,6 +206,8 @@
 
 .s-nav-list a li img{
 	margin-right: 10px;
+	width: 20px;
+	height: auto;
 }
 
 .s-nav-list > li:nth-child(1) {
@@ -238,6 +240,39 @@
 
 .breadcrumb-con a, .breadcrumb-con span {
 	margin-right: 10px;
+}
+
+/*** loader ***/
+.loader-con {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	z-index: 999;
+}
+
+.loader {
+	width: 40px;
+	height: 40px;
+	background-color: transparent;
+	border: 7px solid var(--border-clr);
+	border-radius: 50%;
+	border-bottom: 7px solid var(--clr-accent);
+	animation: rotate 1s infinite;
+	margin-bottom: 10px;
+}
+
+@keyframes rotate {
+	100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    }
 }
 
 /*** footer ***/

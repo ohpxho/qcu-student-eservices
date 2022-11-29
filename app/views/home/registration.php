@@ -7,10 +7,10 @@
 		<div class="registration-con">
 			<br>
 			<p class="header">Create Account</p>
-			<p>Account will not be activated immediately. Admin will need to review and evaluate the details you provided. Evaluation will only takes 24 hours in standard setting. Then, email will be sent after. Only students of the QCU are allowed to register.</p>
+			<p>Account will not be activated immediately. Admin will need to review and evaluate the details you provided. Evaluation will takes 2 ~ 3 days depends on the load of needed to evaluate. Then, email will be sent after. Only students of the QCU are allowed to register.</p>
 			<div class="steps-con">
 				<div class="step active" id="step1"><span>Account Details</span></div>
-				<div class="step" id="step2"><span>Student Details</span></div>
+				<div class="step" id="step2"><span>Personal Details</span></div>
 				<div class="step" id="step3"><span>Data Privacy Consent</span></div>
 			</div>
 			<?php

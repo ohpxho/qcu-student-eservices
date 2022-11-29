@@ -1,0 +1,9 @@
+#std-acc-app-btn {
+	background-color: var(--clr-accent);
+	color: white;
+	margin-right: 0;
+}
+
+#std-acc-rej-btn {
+	background-color: transparent;
+}

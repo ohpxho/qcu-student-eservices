@@ -2,7 +2,10 @@
 
 	class Registrar extends Controller {
 		
-
+		public function __construct() {
+			$this->userModel = $this->initModel('Users');
+			$this->studentModel = $this->initModel('Students');
+		}
 
 		public function doIndex() {
 			redirectIfNotLoggedIn();
@@ -54,7 +57,7 @@
 			$this->showView('registrar/lacking-documents', $data);
 		}
 
-		public function doAcademicDocuments() {
+		public function doRequestAcademicDocuments() {
 			redirectIfNotLoggedIn();
 
 			$data = [
@@ -102,6 +105,26 @@
 			];
 
 			$this->showView('registrar/admission', $data);
+		}
+
+
+		public function doSearch() {
+			redirectIfNotLoggedIn();
+
+			if($_SERVER['REQUEST_METHOD'] == 'POST') {
+				$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+				$target = trim($post['target']);
+
+				$result = $this->studentModel->searchStudents($target);
+				
+				if(is_array($result) || is_object($result)) {
+					echo json_encode($result);
+					return;
+				}
+				echo '';
+				return;
+			}
 		}
 
 	}

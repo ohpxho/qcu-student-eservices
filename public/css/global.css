@@ -108,10 +108,12 @@ input[type="text"], input[type="number"], input[type="password"], select {
 	border: 1px solid var(--clr-accent);
 	background-color: var(--clr-light-accent);
 	outline: none;
+	color: var(--ff-clr-primary) !important;
 }
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, select:focus {
 	border: 2px solid var(--clr-accent);
+
 }
 
 input[type="submit"], button, a[data-type="button"] {
@@ -176,6 +178,133 @@ input[type="submit"], button, a[data-type="button"] {
 
 .subtext {
 	font-size: var(--fs-secondary);
+}
+
+.table-con {
+	margin: 40px;
+	padding: 10px;
+}
+
+
+.search-con input[name="search"]{
+	width: 50%;
+}
+
+.search-con {
+	margin-bottom: 20px;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	border-collapse: collapse;
+}
+
+
+
+table th {
+	font-weight: var(--fw-semi-bold);
+	padding: 15px 5px 20px 5px;	
+}
+
+table th:nth-child(1), table td:nth-child(1) {
+	display: flex;
+	align-items: center;
+}
+
+table th > input[type="checkbox"], table td > input[type="checkbox"] {
+	margin-right: 15px;
+	border: 1px solid white !important;
+	outline: none;
+}
+
+table tr:nth-child(even) {
+	background-color: var(--clr-light-bland);
+}
+
+table tr td {
+	padding: 15px 5px;
+}
+
+table tr td > a {
+	color: var(--clr-accent);
+	cursor: pointer;
+}
+
+
+.details-modal-con {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: none;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.details-con {
+	width: 800px;
+	background-color: white;
+	height: 500px;
+	padding: 10px 10px;
+	border-radius: 10px;
+}
+
+
+.details-form-con {
+	width: 100%;
+	max-height: 380px;
+	padding: 10px;
+	overflow-y: scroll;
+}
+
+.details-header-con {
+	width: 760px;
+	padding: 20px 10px 15px 10px;
+	background-color: white;
+	margin-bottom: 10px;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+}
+
+.details-header-con > img{
+	width: 25px;
+	margin-left: auto;
+	height: auto;
+	cursor: pointer;
+}
+
+.details-subtext {
+	padding: 0px 10px;
+}
+
+.form-group {
+	margin-bottom: 5px;
+	padding: 0px 10px;
+}
+
+.three-form-group {
+	display: flex;
+	justify-content: space-between;	
+}
+
+.three-form-group > div {
+	width: 35%;
+}
+
+.two-form-group {
+	display: flex;
+	justify-content: space-between;	
+}
+
+.two-form-group > div {
+	width: 50%;
 }
 
 @media(min-width: 0) {

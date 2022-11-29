@@ -25,9 +25,6 @@
 				
 				$user = [
 					'id' => $_SESSION['id'],
-					'fname' => trim($post['fname']),
-					'mname' => trim($post['mname']),
-					'lname' => trim($post['lname']),
 					'email' => trim($post['email']),
 					'oldpass' => trim($post['oldpass']),
 					'newpass' => trim($post['newpass']),
@@ -66,14 +63,6 @@
 
 		public function isUpdateDetailsValid($user) {
 
-			if(empty($user['fname'])) {
-				return 'Firstname cannot be empty.';
-			} 
-
-			if(empty($user['lname'])) {
-				return 'Lastname cannot be empty.';
-			}
-
 			if(empty($user['email'])) {
 				return 'Email cannot be empty.';
 			}
@@ -82,7 +71,8 @@
  			   return 'Email is invalid. Please try again.';
 			}
 
-			if($this->userModel->findUSerByEmail($user['email'])) {
+			$userByEmail = $this->userModel->findUSerByEmail($user['email']);
+			if($userByEmail && $userByEmail->id != $user['id']) {
 				return 'Email is already in use.';
 			}
 
@@ -136,9 +126,6 @@
 
 		public function updateSession($user) {
 			$_SESSION['email'] = $user['email'];
-			$_SESSION['fname'] = $user['fname'];
-			$_SESSION['mname'] = $user['mname'];	
-			$_SESSION['lname'] = $user['lname'];		
 			if(!empty($user['pic'])) {
 				$_SESSION['pic'] = $user['pic'];
 			}

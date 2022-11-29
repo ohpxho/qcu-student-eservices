@@ -1,6 +1,7 @@
 <?php
 	require APPROOT.'/views/includes/header.php';
 	require APPROOT.'/views/includes/h-navigation.php';
+	require APPROOT.'/views/includes/loader.php';
 ?>
 	
 	<main role="main">
@@ -8,7 +9,7 @@
 			<div class="hm-login-con">
 				<div class="hm-login-form-con">
 					<div class="hm-login-form-head-con">
-						<p>Student E - Services</p>
+						<p>Student &nbsp;E-Services</p>
 						<hr />	
 					</div>
 

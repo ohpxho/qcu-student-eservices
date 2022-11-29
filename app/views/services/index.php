@@ -12,7 +12,9 @@
 				<div class="service-dep-option-con">
 					<a href="<?php echo URLROOT; ?>/osas">
 						<div class="service-option-con">
-							<div class="service-option-icon-con"><img src="#"></div>
+							<div class="service-option-icon-con">
+								<img src="<?php echo URLROOT; ?>/public/assets/img/osas.png">
+							</div>
 							<div class="service-option-desc-con">
 								<p>Office of Student Affairs and Services</p>
 								<p class="subtext flavor">e.g laptop borrowing, request university ID, etc.</p>
@@ -22,7 +24,9 @@
 					
 					<a href="<?php echo URLROOT; ?>/registrar">
 						<div class="service-option-con">
-							<div class="service-option-icon-con"><img src="#"></div>
+							<div class="service-option-icon-con">
+								<img src="<?php echo URLROOT; ?>/public/assets/img/registrar.png">
+							</div>
 							<div class="service-option-desc-con">
 								<p>University Registrar</p>
 								<p class="subtext flavor">e.g admission, request academic documents, etc.</p>
@@ -32,7 +36,9 @@
 					
 					<a href="<?php echo URLROOT; ?>/guidance">
 						<div class="service-option-con">
-							<div class="service-option-icon-con"><img src="#"></div>
+							<div class="service-option-icon-con">
+								<img src="<?php echo URLROOT; ?>/public/assets/img/guidance.png">
+							</div>
 							<div class="service-option-desc-con">
 								<p>Guidance and Councelling</p>
 								<p class="subtext flavor">e.g councelling, good moral certificate.</p>
@@ -42,7 +48,9 @@
 					
 					<a href="<?php echo URLROOT; ?>/finance">
 						<div class="service-option-con">
-							<div class="service-option-icon-con"><img src="#"></div>
+							<div class="service-option-icon-con">
+								<img src="<?php echo URLROOT; ?>/public/assets/img/finance.png">
+							</div>
 							<div class="service-option-desc-con">
 								<p>Office of Finance</p>
 								<p class="subtext flavor">e.g tuition payment, request order of payment.</p>

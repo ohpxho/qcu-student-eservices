@@ -37,26 +37,10 @@
 							<span class="profile-subtext">Change your profile picture.</span>
 						</div>
 					</div>
-
-					<div class="form-group">
-						<span>Firstname</span>
-						<input type="text" name="fname" value=""/>
-					</div>
-					
-					<div class="form-group">
-						<span>Middlename</span>
-						<input type="text" name="mname" value=""/>
-						<span class="profile-subtext">Optional, just in case you don't have any middlename.</span>
-					</div>
-
-					<div class="form-group">
-						<span>Lastname</span>
-						<input type="text" name="lname" value=""/>
-					</div>
 					
 					<div class="form-group">
 						<span>Email</span>
-						<input type="text" name="email" value=""/>
+						<input type="text" name="email" value="<?php echo $_SESSION['email']; ?>"/>
 						<span class="profile-subtext">This will be the email used for any transactions within the university.</span>
 					</div>
 					

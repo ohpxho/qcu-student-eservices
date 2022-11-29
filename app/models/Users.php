@@ -78,7 +78,7 @@
 			$this->db->bind(':email', $email);
 			$result = $this->db->getSingleResult();
 			if(is_object($result)) {
-				return true;
+				return $result;
 			}
 
 			return false;
@@ -97,19 +97,16 @@
 
 		public function updateUser($user) {
 			if(!empty($user['pass']) && !empty($user['pic'])) {
-				$this->db->query("UPDATE users SET fname=:fname, mname=:mname, lname=:lname, email=:email, pic=:pic, pass=:pass WHERE id=:id");
+				$this->db->query("UPDATE users SET email=:email, pic=:pic, pass=:pass WHERE id=:id");
 			} elseif(!empty($user['pass'])) {
-				$this->db->query("UPDATE users SET fname=:fname, mname=:mname, lname=:lname, email=:email, pass=:pass WHERE id=:id");
+				$this->db->query("UPDATE users SET email=:email, pass=:pass WHERE id=:id");
 			} elseif(!empty($user['pic'])) {
-				$this->db->query("UPDATE users SET fname=:fname, mname=:mname, lname=:lname, email=:email, pic=:pic WHERE id=:id");
+				$this->db->query("UPDATE users SET email=:email, pic=:pic WHERE id=:id");
 			} else {
-				$this->db->query("UPDATE users SET fname=:fname, mname=:mname, lname=:lname, email=:email WHERE id=:id");	
+				$this->db->query("UPDATE users SET email=:email WHERE id=:id");	
 			}
 
 			$this->db->bind(':id', $user['id']);
-			$this->db->bind(':fname', $user['fname']);
-			$this->db->bind(':mname', $user['mname']);
-			$this->db->bind(':lname', $user['lname']);
 			$this->db->bind(':email', $user['email']);
 
 			if(!empty($user['pic'])) {
@@ -121,6 +118,13 @@
 			}
 
 			return $this->db->execute();
+		}
+
+
+		public function fetchAllPendingStudent() {
+			$this->db->query("SELECT users.*, student.* FROM users LEFT JOIN student ON users.id = student.id WHERE users.approve = 0");
+			$result = $this->db->getAllResult();
+			return $result;
 		}
 		
 	}
