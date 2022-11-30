@@ -126,9 +126,20 @@ input[type="submit"], button, a[data-type="button"] {
 	border-radius: 5px;
 }
 
+.btn-default-style {
+	background-color: var(--clr-accent);
+	color: white;
+}
+
 a[data-type="button"] {
  	padding: 3.5px 10px;
  }
+
+hr {
+	margin: 15px 0px;
+	border: none;
+	border-top: 1px solid var(--border-clr);
+}
 
 .wrpane-con {
 	border: 1px solid var(--border-clr);
@@ -415,6 +426,43 @@ table tr td > a {
 .two-form-group > div {
 	width: 50%;
 }
+
+.std-srv-content-con {
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+
+.std-srv-content-left-con {
+	height: 100%;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+.std-srv-form-con {
+	margin-top: 30px;
+	width: 400px;
+	height: auto;
+}
+
+.std-srv-content-right-con {
+	width: 50%;
+}
+
+.std-srv-instruction-con {
+	padding: 10px;
+}
+
+.std-srv-instruction-con p{
+	margin: 10px;
+	margin-left: 0;
+}
+
+.std-srv-instruction-con ul{
+	margin: 10px;
+}
+
 
 @media(min-width: 0) {
 

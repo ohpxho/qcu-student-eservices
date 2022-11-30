@@ -64,6 +64,9 @@
 	color: var(--clr-bland);
 }
 
+/*osas*/
+
+
 @media(min-width: 0) {
 	.service-main-option-con {
 		width: 400px;
