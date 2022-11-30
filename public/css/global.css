@@ -292,22 +292,31 @@ table {
 	border-collapse: collapse;
 }
 
-
-
 table th {
 	font-weight: var(--fw-semi-bold);
 	padding: 15px 5px 20px 5px;	
 }
 
-table th:nth-child(1), table td:nth-child(1) {
+table th > span{
 	display: flex;
 	align-items: center;
 }
 
-table th > input[type="checkbox"], table td > input[type="checkbox"] {
+table th > span img{
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+table th > span input[type="checkbox"], table td > input[type="checkbox"] {
 	margin-right: 15px;
 	border: 1px solid white !important;
 	outline: none;
+}
+
+table td > input[type="checkbox"] {
+	top: 2px;
 }
 
 table tr:nth-child(even) {
@@ -323,6 +332,15 @@ table tr td > a {
 	cursor: pointer;
 }
 
+.selected-row-btn-con {
+	margin-top: 10px;
+}
+
+.selected-row-btn-con button{
+	color: white;
+	background-color: var(--clr-accent);
+	margin-bottom: 5px;
+}
 
 .details-modal-con {
 	position: fixed;

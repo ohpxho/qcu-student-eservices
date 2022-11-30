@@ -158,6 +158,30 @@
 				return;
 			}
 		}
+
+		public function doUpdateMultApproveAttr() {
+			redirectIfNotLoggedIn();
+
+			if($_SERVER['REQUEST_METHOD'] == 'POST') {
+				$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+				$data = $post['data'];
+
+				$result = true;
+				foreach($data as $index => $student) {
+					$result = $this->userModel->updateApproveAttr($student);
+					if($result) {
+						$result = true;
+					} else {
+						$result = false;
+						break;
+					}
+				}
+
+				echo json_encode($result);
+				return;
+				
+			}
+		}
 	}
 
 

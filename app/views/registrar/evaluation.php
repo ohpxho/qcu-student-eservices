@@ -95,22 +95,26 @@
 						</div>
 					</div>
 				</div>
+				<div class="wrpane-con success">
+					<p>Student application's status updated successfuly.</p>
+				</div>
 				<table>
 					<tr>
-						<th><input type="checkbox" id="all-select-row-checkbox"/>ID</th>
+						<th><span><input type="checkbox" id="all-select-row-checkbox"/>ID<img src="<?php echo URLROOT; ?>/public/assets/img/sort.png" data-orderby="id" class="tbl-order-btn"/></span></th>
 						<th>Email</th>
-						<th>Firstname</th>
-						<th>Lastname</th>
+						<th><span>Firstname<img src="<?php echo URLROOT; ?>/public/assets/img/sort.png" data-orderby="fname" class="tbl-order-btn"/></span></th>
+						<th><span>Lastname<img src="<?php echo URLROOT; ?>/public/assets/img/sort.png" data-orderby="lname" class="tbl-order-btn"/></th>
 						<th>Course</th>
-						<th>Year</th>
-						<th>Section</th>
-						<th>Type</th>
+						<th><span>Year<img src="<?php echo URLROOT; ?>/public/assets/img/sort.png" data-orderby="year" class="tbl-order-btn"/></th>
+						<th><span>Section<img src="<?php echo URLROOT; ?>/public/assets/img/sort.png" data-orderby="section" class="tbl-order-btn"/></th>
+						<th><span>Type<img src="<?php echo URLROOT; ?>/public/assets/img/sort.png" data-orderby="type" class="tbl-order-btn"/></th>
 						<th>Approve</th>
 					</tr>					
 				</table>
-				<div class="">
-					<button>Approve</button>
+				<div class="selected-row-btn-con">
+					<button id="mult-std-acc-app-btn" disabled>Approve</button>
 					<a>Reject</a>
+					<p class="subtext">Selected rows will get evaluated at the same time.</p>
 				</div>
 			</div>
 
@@ -216,17 +220,18 @@
 						<div class="form-group">
 							<button id="std-acc-app-btn">Approve</button>
 							<a class="std-acc-rej-link">Reject</a>
-							<div class="rej-stud-acc-modal-con">
-								<div class="rej-stud-acc-modal">
-									<p>Reason Of Refusal</p>
-									<p class="subtext">Please state the reason of the account's rejection.</p>
-									<textarea placeholder="Type something...."></textarea>
-									<button id="std-acc-rej-btn">Reject</button>
-									<a id="std-acc-rej-cancel-btn">Cancel</a>
-								</div>
-							</div>
 						</div>
 					</div>
+				</div>
+
+			</div>
+			<div class="rej-stud-acc-modal-con">
+				<div class="rej-stud-acc-modal">
+					<p>Reason Of Refusal</p>
+					<p class="subtext">Please state the reason of the account's rejection.</p>
+					<textarea placeholder="Type something...."></textarea>
+					<button id="std-acc-rej-btn">Reject</button>
+					<a id="std-acc-rej-cancel-btn">Cancel</a>
 				</div>
 			</div>
 		</div>

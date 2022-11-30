@@ -16,6 +16,6 @@
 	define('URLROOT', 'http://localhost:'.PORT.'/qcu-eservice');
 	
 	//site
-	define('SITENAME', 'QCU E-Services');
+	define('SITENAME', 'QCU Student E-Services');
 
 ?>

@@ -1,12 +1,10 @@
 
-const loader = document.querySelector('.loader-con');
 const modal = document.querySelector('.details-modal-con');
 const modalHideBtn = document.querySelector('.details-modal-hide-btn');
 const refusalModal = document.querySelector('.rej-stud-acc-modal-con');
+const warningPane = document.querySelector('.table-con > .wrpane-con');
 let order = ['id', 'asc'];
 let students = [];
-//inputs
-
 
 //get table row value
 function viewStudentDetail(index) {
@@ -28,56 +26,46 @@ function viewStudentDetail(index) {
 	const qc_resident = student.qc_resident
 	const contact = student.contact;
 
-	document.querySelector('input[name="id"]').value = id;
-	document.querySelector('input[name="email"]').value = email;
-	document.querySelector('input[name="lname"]').value = lname;
-	document.querySelector('input[name="fname"]').value = fname;
-	document.querySelector('input[name="mname"]').value = mname;
-	document.querySelector('input[name="street"]').value = street;
-	document.querySelector('input[name="city"]').value = city;
-	document.querySelector('input[name="state"]').value = state;
-	document.querySelector('input[name="zip"]').value = zip;
-	document.querySelector('select[name="course"]').value = course;
-	document.querySelector('select[name="year"]').value = year;
-	document.querySelector('input[name="section"]').value = section;
-	document.querySelector('select[name="type"]').value = type;
-	document.querySelector('select[name="resident"]').value = qc_resident;
-	document.querySelector('input[name="contact"]').value = contact;
+	$('input[name="id"]').attr('value', id);
+	$('input[name="email"]').attr('value', email);
+	$('input[name="lname"]').attr('value', lname);
+	$('input[name="fname"]').attr('value', fname);
+	$('input[name="mname"]').attr('value', mname);
+	$('input[name="street"]').attr('value', street);
+	$('input[name="city"]').attr('value', city);
+	$('input[name="state"]').attr('value', state);
+	$('input[name="zip"]').attr('value', zip);
+	$('select[name="course"]').attr('value', course);
+	$('select[name="year"]').attr('value', year);
+	$('input[name="section"]').attr('value', section);
+	$('select[name="type"]').attr('value', type);
+	$('select[name="resident"]').attr('value', qc_resident);
+	$('input[name="contact"]').attr('value', contact);
 
 	modal.style.display = 'flex';
 }
 
 $(document).ready(function() {
-	//init table
-	loader.style.display = 'flex';	
+	showLoader(true);
+	//initialize table
 	initTable();
 
 	//approve student account event
 	$('#std-acc-app-btn').click(function() {
-		const id = $('input[name="id"]').val();
-		const email = $('input[name="email"]').val();
-		const action = 1;
-		const reason = '';
-
+		const data = getDataFromStudentDetails('approve');
+		
 		if (window.confirm("Are you sure?")) {
-			loader.style.display = 'flex';
-			const update = updateApproveAttr({id, email, action, reason});
+			showLoader(true);
+			const update = updateApproveAttr(data);
 
 			update.done(function(result) {
-				if(result) {
-
-				} else {
-
-				}
-
-				modal.style.display = 'none';
-				loader.style.display = 'none';
+				showMessagePane();
+				hideModals();
 				initTable();
 			});
 
 			update.fail(function(jqXHR, textStatus) {
-				loader.style.display = 'none';
-				modal.style.display = 'none';
+				hideModals();
 				initTable();
 				alert( "Request failed: " + textStatus );
 			});
@@ -85,45 +73,88 @@ $(document).ready(function() {
 
 	});
 
-	//reject student account event
-	$('#std-acc-rej-btn').click(function() {
-		const id = $('input[name="id"]').val();
-		const email = $('input[name="email"]').val();
-		const action = -1;
-		const reason = $('.rej-stud-acc-modal > textarea').val();
-
-		if (window.confirm("Are you sure?")) {
-			loader.style.display = 'flex';
-			const update = updateApproveAttr({id, email, action, reason});
+	//approve multiple student account
+	$('#mult-std-acc-app-btn').click(function() {
+		let data = getDataFromSelectedRows('approve');
+	
+		if(window.confirm('Are you sure?')) {
+			showLoader(true);
+			const update = updateMultipleApproveAttr(data);
 
 			update.done(function(result) {
-				if(result) {
-
-				} else {
-
-				}
-
-				refusalModal.style.display = 'none';
-				modal.style.display = 'none';
-				loader.style.display = 'none';
+				showMessagePane()
+				hideModals();
 				initTable();
 			});
 
 			update.fail(function(jqXHR, textStatus) {
-				refusalModal.style.display = 'none';
-				modal.style.display = 'none';
-				loader.style.display = 'none';
+				hideModals();
 				initTable();
 				alert( "Request failed: " + textStatus );
 			});
+		}
+
+	});
+
+	//if the clicked reject link is from the selected rows or not 
+	let isFromSelectedRows = false;
+
+	//reject student account event
+	$('#std-acc-rej-btn').click(function() {
+		if(isFromSelectedRows) {
+			let data = getDataFromSelectedRows('reject');
+
+			if(window.confirm('Are you sure?')) {
+				showLoader(true);
+				const update = updateMultipleApproveAttr(data);
+
+				update.done(function(result) {
+					showMessagePane();
+					hideModals();
+					initTable();
+				});
+
+				update.fail(function(jqXHR, textStatus) {
+					hideModals();
+					initTable();
+					alert( "Request failed: " + textStatus );
+				});
+			}
+		} else {
+			const data = getDataFromStudentDetails('reject')
+
+			if (window.confirm('Are you sure?')) {
+				showLoader(true);
+				const update = updateApproveAttr(data);
+
+				update.done(function(result) {
+					showMessagePane();
+					hideModals();
+					initTable();
+				});
+
+				update.fail(function(jqXHR, textStatus) {
+					hideModals();
+					initTable();
+					alert( "Request failed: " + textStatus );
+				});
+			}
 		}
 	});	
 
 	$('.std-acc-rej-link').click(function() {
-		const textarea = document.querySelector('.rej-stud-acc-modal > textarea');
+		isFromSelectedRows = false;
 		refusalModal.style.display = 'flex';
 	});
 
+	$('.selected-row-btn-con > a').click(function() {
+		if($('.row-checkbox:checked').length > 0) {
+			isFromSelectedRows = true;
+			refusalModal.style.display = 'flex';
+		}
+	});
+
+	//cancel reject modal
 	$('#std-acc-rej-cancel-btn').click(function() {	
 		const textarea = document.querySelector('.rej-stud-acc-modal > textarea');
 		refusalModal.style.display = 'none';
@@ -160,6 +191,24 @@ $(document).ready(function() {
 
 	});
 
+	//sort
+	$('.tbl-order-btn').click(function() {
+		order[0] = $(this).data('orderby');
+		order[1] = (order[1] == 'asc')? 'desc' : 'asc';
+
+		const sort = filterTable();
+		
+		sort.done(function(result) {
+			appendRowResult(result);
+		});
+
+		sort.fail(function(jqXHR, textStatus) {
+			alert( "Request failed: " + textStatus );
+		});
+
+	}); 
+
+	const multSelApproveBtn = document.querySelector('#mult-std-acc-app-btn');
 	//hide details modal event
 	$('.details-modal-hide-btn').click(function() {
 		modal.style.display = 'none';
@@ -173,17 +222,27 @@ $(document).ready(function() {
 				$(this).prop('checked', false);
 			}
 		});
+
+		if($('#all-select-row-checkbox').is(':checked')) {
+			multSelApproveBtn.disabled = false;
+		} else {
+			multSelApproveBtn.disabled = true;
+		}			
+	});
+
+	$('.row-checkbox').change(function() {
+		alert('miming');
 	});
 
 	function initTable() {
 		const init = filterTable();
 		init.done(function(result) {
 			appendRowResult(result);
-			loader.style.display = 'none';
+			showLoader(false);
 		});
 
 		init.fail(function(jqXHR, textStatus) {
-			loader.style.display = 'none';
+			showLoader(false);
 			alert( "Request failed: " + textStatus );
 		});
 	}
@@ -198,6 +257,17 @@ $(document).ready(function() {
 		        email: data.email,
 		        action: data.action,
 		        reason: data.reason
+		    }
+		});
+	}
+
+	function updateMultipleApproveAttr(data) {
+		return $.ajax({
+			url: '/qcu-eservice/registrar/updateMultApproveAttr' ,
+			type: 'POST',
+			dataType: "json",
+		    data: {
+		        data: data
 		    }
 		});
 	}
@@ -226,7 +296,7 @@ $(document).ready(function() {
 		students = result;
 		if(result.length == 0) {
 			rowsToAppend += `<tr>` +
-							`<td>No Data Found</td>` +  
+							`<td class="td-no-result" style="text-align: center">No Data Found</td>` +  
 							`</tr>`;
 		} else {
 			$.each(result, function(index, student) {
@@ -241,8 +311,8 @@ $(document).ready(function() {
 			const approve = 'pending';
 
 			rowsToAppend += `<tr>` +
-							`<td><input type="checkbox" />${id}</td>` +
-							`<td>${email}</td>` +
+							`<td><input type="checkbox" class="row-checkbox"/><span class="tbl-col-id">${id}</span></td>` +
+							`<td class="tbl-col-email">${email}</td>` +
 							`<td>${fname}</td>` +
 							`<td>${lname}</td>` +
 							`<td>${course.toUpperCase()}</td>` +
@@ -257,7 +327,51 @@ $(document).ready(function() {
 
 		$('.table-con > table').find('tr:gt(0)').remove();
 		$('.table-con > table').append(rowsToAppend);
+		$('.td-no-result').attr('colspan', 100);
 	}
 
+	function getDataFromSelectedRows(act) {
+		const data = [];
+		const action = (act == 'approve')? 1 : -1;
+		$('.row-checkbox:checked').each(function(index) {
+			data[index] = {
+				id: $(this).closest('tr').find('.tbl-col-id').html(),
+				email: $(this).closest('tr').find('.tbl-col-email').html(),
+				action: action,
+				reason: $('.rej-stud-acc-modal > textarea').val()	
+			}; 
+			
+		});
 
+		return data;
+	}
+
+	function getDataFromStudentDetails(act) {
+		const action = (act == 'approve')? 1 : -1;
+		const id = $('input[name="id"]').val();
+		const email = $('input[name="email"]').val();
+		const reason = $('.rej-stud-acc-modal > textarea').val();
+		
+		return {id, email, action, reason};
+	}
+
+	function showMessagePane() {
+		warningPane.style.display = 'flex';
+		setTimeout(() => warningPane.style.display = 'none', 3000);
+	}
+
+	function hideModals() {
+		refusalModal.style.display = 'none';
+		modal.style.display = 'none';
+		loader.style.display = 'none';
+	}
+
+	function showLoader(show) {
+		const loader = document.querySelector('.loader-con');
+		if(show) {
+			loader.style.display = 'flex';
+		} else {
+			loader.style.display = 'none';
+		}
+	}	 
 });
