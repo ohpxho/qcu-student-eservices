@@ -42,7 +42,21 @@
 			</ul>
 			<div class="h-nav-profile-con">
 				<button id="prof-md-btn">
-					<img src="<?php echo $_SESSION['pic']; ?>" />
+
+					<div class="prof-md-btn-pic-holder">
+						<?php
+							if(empty($_SESSION['pic'])):
+						?>
+								<img src="<?php echo URLROOT; ?>/public/assets/img/uploads/default.webp" />
+						<?php
+							else:
+						?>
+								<img src="<?php echo URLROOT.$_SESSION['pic']; ?>" />
+						<?php
+							endif;
+						?>
+					</div>
+					
 					<span><?php echo $_SESSION['fname'] ?></span>
 					<div class="prof-md-arrow"></div>
 				</button>

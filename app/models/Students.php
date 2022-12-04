@@ -5,7 +5,7 @@
 			$this->db = new Database();
 		}
 
-		public function findUserById($id) {
+		public function findStudentById($id) {
 			$this->db->query("SELECT * FROM student WHERE id=:id");
 			$this->db->bind(':id', $id);
 

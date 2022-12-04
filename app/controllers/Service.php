@@ -21,7 +21,7 @@
 				'admissionclass' => '',
 				'acadclass' => '',
 				'lackclass' => '',
-				'councellingclass' => '',
+				'counselingclass' => '',
 				'moralclass' => '',
 				'tuitionclass' => '',
 				'oopclass' => '',

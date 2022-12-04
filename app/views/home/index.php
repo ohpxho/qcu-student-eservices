@@ -30,10 +30,14 @@
 					?>
 
 					<form action="<?php echo URLROOT; ?>/home/index" method="POST">
-						<span>Registered ID/Email<span>*</span></span><br/>
-						<input type="text" name="id"><br/><br/>
-						<span>Password<span>*</span></span><br/>
-						<input type="password" name="pass"><br/>
+						<div class="form-group">
+							<span>Registered ID/Email<span style="color: var(--clr-err)">*</span></span>
+							<input type="text" name="id">
+						</div>
+						<div class="form-group">
+							<span>Password<span style="color: var(--clr-err)">*</span></span><br/>
+							<input type="password" name="pass"><br/>
+						</div>
 						<div>	
 							<input type="submit" text="Login" value="Login"/>
 							<a class="create-acc-link" href="<?php echo URLROOT; ?>/home/registration" >Create Account</a>
@@ -41,7 +45,6 @@
 						</div>
 					</form>
 					<p>*For alumni, please tap this button <a href="<?php echo URLROOT; ?>/alumni" class="login-alumni-btn" data-type="button">Login As Alumni</a></p><br>
-					<p>*For admission purposes, please go to this link <a href="#"><u>QCUAdmission</u></a></p>
 				</div>
 			</div>
 		

@@ -30,7 +30,17 @@
 					
 					<div class="form-group">
 						<div>
-							<img src="<?php echo $_SESSION['pic'] ?>"/>
+							<?php
+							if(empty($_SESSION['pic'])):
+							?>
+									<img src="<?php echo URLROOT; ?>/public/assets/img/uploads/default.webp" />
+							<?php
+								else:
+							?>
+									<img src="<?php echo URLROOT.$_SESSION['pic']; ?>" />
+							<?php
+								endif;
+							?>
 						</div>
 						<div>
 							<input type="file" name="pic" accept="image/x-png,image/gif,image/jpeg,image/jpg"/>

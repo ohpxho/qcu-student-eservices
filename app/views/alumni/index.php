@@ -17,6 +17,22 @@
 				<button id="alumni-modal-btn">Continue</button>
 			</div>
 		</div>
+
+		<div class="alumni-main-con">
+			<div class="alumni-main-option-con">
+				<div class="alumni-request-heading-con">
+					<p class="header">Select One</p>
+					<p>Click or tap the link of the document to request.</p><br>
+				</div>
+				<div class="alumni-request-option-con">
+					<a>TOR</a>
+					<a>Diploma</a>
+					<a>Authentication/Certified True Copy</a>
+					<a>Others</a>
+				</div>
+			</div>
+		</div>
+
 		<script src="<?php echo URLROOT; ?>/public/script/alumni.js"></script>
 	</main>
 

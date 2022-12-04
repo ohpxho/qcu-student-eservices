@@ -5,6 +5,7 @@
 		public function __construct() {
 			$this->userModel = $this->initModel('Users');
 			$this->studentModel = $this->initModel('Students');
+			$this->adminModel = $this->initModel('Admins');
 		}
 		
 		public function doIndex() {
@@ -159,11 +160,12 @@
 			$_SESSION['id'] = $user->id;
 			$_SESSION['email'] = $user->email;
 			if($user->type == 'student') {
-				$student = $this->studentModel->findUSerById($user->id);
+				$student = $this->studentModel->findStudentById($user->id);
 				print($student->fname);
 				$_SESSION['fname'] = $student->fname;		
 			} else {
-				$_SESSION['fname'] = 'Admin';	
+				$admin = $this->adminModel->findAdminById($user->id);
+				$_SESSION['fname'] = $admin->fname;	
 			}
 			$_SESSION['type'] = $user->type;
 			$_SESSION['pic'] = $user->pic;

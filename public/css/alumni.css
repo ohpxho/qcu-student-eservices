@@ -26,6 +26,27 @@
 	margin-right: 0;
 }
 
+/*********************/
+
+.alumni-main-con {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.alumni-main-option-con {
+	display: flex;
+	margin-top: 5rem;
+	flex-direction: column;	
+}
+
+.alumni-request-option-con {
+	display: flex;
+	flex-direction: column;
+}
+
 @media(min-width: 0) {
 	.alumni-id-modal {
 		width: 400px;
@@ -41,5 +62,9 @@
 	.alumni-id-modal {
 		width: 400px;
 		min-height: 200px;
+	}
+
+	.alumni-main-option-con {
+		width: 800px;
 	}
 }

@@ -21,16 +21,25 @@
 				'lackclass' => '',
 				'acadclass' => '',
 				'admissionclass' => '',
-				'councellingclass' => '',
+				'counselingclass' => '',
 				'moralclass' => '',
+				'psychclass' => '',
+				'invclass' => '',
+				'needsclass' => '',
+				'facultyclass' => '',
+				'libappclass' => '',
+				'librefclass' => '',
+				'libcardclass' => '',
 				'oopclass' => '',
 				'tuitionclass' => '',
-				'evalclass' => ''
+				'evalclass' => '',
+				'department' => $_SESSION['type']
 			];
 
-			$this->showView('request/index', $data);
+			$this->showView('/request/index', $data);
 		}
 
+	
 		public function doRequestUniversityID() {
 			redirectIfNotLoggedIn();
 
@@ -43,7 +52,8 @@
 				'idclass' => 'sactive',
 				'borrowclass' => '',
 				'repairclass' => '',
-				'returnclass' => ''
+				'returnclass' => '',
+				'department' => 'osas'
 			];
 
 			$this->showView('osas/id', $data);
@@ -62,7 +72,8 @@
 				'idclass' => '',
 				'borrowclass' => 'sactive',
 				'repairclass' => '',
-				'returnclass' => ''
+				'returnclass' => '',
+				'department' => 'osas'
 			];
 
 			$this->showView('osas/borrow', $data);
@@ -81,7 +92,8 @@
 				'idclass' => '',
 				'borrowclass' => '',
 				'repairclass' => 'sactive',
-				'returnclass' => ''
+				'returnclass' => '',
+				'department' => 'osas'
 			];
 
 			$this->showView('osas/repair', $data);
@@ -100,7 +112,8 @@
 				'idclass' => '',
 				'borrowclass' => '',
 				'repairclass' => '',
-				'returnclass' => 'sactive'
+				'returnclass' => 'sactive',
+				'department' => 'osas'
 			];
 
 			$this->showView('osas/return', $data);
@@ -119,7 +132,8 @@
 				'lackclass' => 'sactive',
 				'acadclass' => '',
 				'admissionclass' => '',
-				'evalclass' => ''
+				'evalclass' => '',
+				'department' => 'registrar'
 			];
 
 			$this->showView('registrar/lacking-documents', $data);
@@ -137,7 +151,8 @@
 				'lackclass' => '',
 				'acadclass' => 'sactive',
 				'admissionclass' => '',
-				'evalclass' => ''
+				'evalclass' => '',
+				'department' => 'registrar'
 			];
 
 			$this->showView('registrar/academic-documents', $data);
@@ -155,14 +170,15 @@
 				'lackclass' => '',
 				'acadclass' => '',
 				'admissionclass' => '',
-				'evalclass' => 'sactive'
+				'evalclass' => 'sactive',
+				'department' => 'registrar'
 			];
 
 			$this->showView('registrar/evaluation', $data);
 		}
 
 
-		public function doCouncelling() {
+		public function doCounseling() {
 			redirectIfNotLoggedIn();
 
 			$data = [
@@ -171,11 +187,16 @@
 				'svclass' => '',
 				'apclass' => '',
 				'rqclass' => 'hactive',
-				'councellingclass' => 'sactive',
-				'moralclass' => ''
+				'counselingclass' => 'sactive',
+				'moralclass' => '',
+				'psychclass' => '',
+				'invclass' => '',
+				'needsclass' => '',
+				'facultyclass' => '',
+				'department' => 'guidance'
 			];
 
-			$this->showView('guidance/councelling', $data);
+			$this->showView('guidance/counseling', $data);
 		}
 
 		public function doRequestOfGoodMoral() {
@@ -187,11 +208,171 @@
 				'svclass' => '',
 				'apclass' => '',
 				'rqclass' => 'hactive',
-				'councellingclass' => '',
-				'moralclass' => 'sactive'
+				'counselingclass' => '',
+				'moralclass' => 'sactive',
+				'psychclass' => '',
+				'invclass' => '',
+				'needsclass' => '',
+				'facultyclass' => '',
+				'department' => 'guidance'
 			];
 
 			$this->showView('guidance/cert', $data);
+		}
+
+		public function doPsychologicalTesting() {
+			redirectIfNotLoggedIn();
+
+			$data = [
+				'title' => SITENAME,
+				'ovclass' => '',
+				'svclass' => '',
+				'apclass' => '',
+				'rqclass' => 'hactive',
+				'counselingclass' => '',
+				'moralclass' => '',
+				'psychclass' => 'sactive',
+				'invclass' => '',
+				'needsclass' => '',
+				'facultyclass' => '',
+				'department' => 'guidance'
+			];
+
+			$this->showView('guidance/psych-testing', $data);
+		}
+
+		public function doIndividualInventoryRecord() {
+			redirectIfNotLoggedIn();
+
+			$data = [
+				'title' => SITENAME,
+				'ovclass' => '',
+				'svclass' => '',
+				'apclass' => '',
+				'rqclass' => 'hactive',
+				'counselingclass' => '',
+				'moralclass' => '',
+				'psychclass' => '',
+				'invclass' => 'sactive',
+				'needsclass' => '',
+				'facultyclass' => '',
+				'department' => 'guidance'
+			];
+
+			$this->showView('guidance/indv-inventory', $data);
+		}
+
+		public function doStudentNeedsAssessment() {
+			redirectIfNotLoggedIn();
+
+			$data = [
+				'title' => SITENAME,
+				'ovclass' => '',
+				'svclass' => '',
+				'apclass' => '',
+				'rqclass' => 'hactive',
+				'counselingclass' => '',
+				'moralclass' => '',
+				'psychclass' => '',
+				'invclass' => '',
+				'needsclass' => 'sactive',
+				'facultyclass' => '',
+				'department' => 'guidance'
+			];
+
+			$this->showView('guidance/needs-assessment', $data);
+		}
+
+		public function doFacultyEvaluation() {
+			redirectIfNotLoggedIn();
+
+			$data = [
+				'title' => SITENAME,
+				'ovclass' => '',
+				'svclass' => '',
+				'apclass' => '',
+				'rqclass' => 'hactive',
+				'counselingclass' => '',
+				'moralclass' => '',
+				'psychclass' => '',
+				'invclass' => '',
+				'needsclass' => '',
+				'facultyclass' => 'sactive',
+				'department' => 'guidance'
+			];
+
+			$this->showView('guidance/faculty-eval', $data);
+		}
+
+
+		public function doLibraryCardApplication() {
+			redirectIfNotLoggedIn();
+
+			$data = [
+				'title' => SITENAME,
+				'ovclass' => '',
+				'svclass' => '',
+				'apclass' => '',
+				'rqclass' => 'hactive',
+				'libcardclass' => 'sactive',
+				'librefclass' => '',
+				'libappclass' => '',
+				'department' => 'library'
+			];
+
+			$this->showView('library/card-app', $data);
+		}
+
+		public function doLibraryOnlineReferenceService() {
+			redirectIfNotLoggedIn();
+
+			$data = [
+				'title' => SITENAME,
+				'ovclass' => '',
+				'svclass' => '',
+				'apclass' => '',
+				'rqclass' => 'hactive',
+				'libcardclass' => '',
+				'librefclass' => 'sactive',
+				'libappclass' => '',
+				'department' => 'library'
+			];
+
+			$this->showView('library/ref-service', $data);
+		}
+
+		public function doLibraryStudentAppointmentRequest() {
+			redirectIfNotLoggedIn();
+
+			$data = [
+				'title' => SITENAME,
+				'ovclass' => '',
+				'svclass' => '',
+				'apclass' => '',
+				'rqclass' => 'hactive',
+				'libcardclass' => '',
+				'librefclass' => '',
+				'libappclass' => 'sactive',
+				'department' => 'library'
+			];
+
+			$this->showView('library/stud-app', $data);
+		}
+
+		public function doOnlineConsultation() {
+			redirectIfNotLoggedIn();
+
+			$data = [
+				'title' => SITENAME,
+				'ovclass' => '',
+				'svclass' => 'hactive',
+				'rqclass' => 'hactive',
+				'apclass' => '',
+				'consultclass' => 'sactive',
+				'department' => 'medical'
+			];
+
+			$this->showView('medical/online-consultation', $data);
 		}
 
 		public function doRequestOrderOfPayment() {
@@ -204,7 +385,8 @@
 				'apclass' => '',
 				'rqclass' => 'hactive',
 				'oopclass' => 'sactive',
-				'tuitionclass' => ''
+				'tuitionclass' => '',
+				'department' => 'finance'
 			];
 
 			$this->showView('finance/order-of-payment', $data);
@@ -220,13 +402,12 @@
 				'apclass' => '',
 				'rqclass' => 'hactive',
 				'oopclass' => '',
-				'tuitionclass' => 'sactive'
+				'tuitionclass' => 'sactive',
+				'department' => 'finance'
 			];
 
 			$this->showView('finance/tuition', $data);
 		}
-
 	}
-
 
 ?>

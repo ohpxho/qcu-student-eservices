@@ -9,8 +9,17 @@
 		<div class="dep-service-content-con">
 			<?php
 				require APPROOT.'/views/includes/breadcrumb.php';
+
+				if($_SESSION['type'] == 'student'):
+					require APPROOT.'/views/guidance/faculty-eval/student.php';
+				else:
+					require APPROOT.'/views/guidance/faculty-eval/admin.php';
+				endif;
 			?>
 		</div>
+
+		<script src="<?php echo URLROOT; ?>/public/script/list-dropdown.js"></script>
+		<script src="<?php echo URLROOT; ?>/public/script/services.js"></script>
 	</div>
 <?php
 	require APPROOT.'/views/includes/footer.php';

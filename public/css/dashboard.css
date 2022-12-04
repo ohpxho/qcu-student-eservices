@@ -1,0 +1,61 @@
+.std-srv-content-dashboard-con {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+}
+
+.std-srv-content-dashboard-con > .std-srv-form-con {
+	width: 80%;
+}
+
+.std-srv-dashboard-con {
+	margin-top: 50px;
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: row;
+	row-gap: 10px;
+}
+
+.std-srv-dashboard-panel-con {
+	width: 49%;
+	min-height: 70px;
+	max-height: 70px;
+	border: 1px solid var(--border-clr);
+	display: flex;
+	align-items: center;
+}
+
+.std-srv-dashboard-panel-count-con {
+	width: 70px;
+	height: 70px;
+	background-color: var(--clr-accent);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.std-srv-dashboard-panel-title-con {
+	margin-left: 10px;
+	display: flex;
+	width: 80%;
+}
+
+.std-srv-dashboard-panel-title-con > p > span{
+	font-weight: var(--fw-semi-bold);
+}
+
+.cancelled {
+	background-color: var(--clr-err);
+}
+
+.processed {
+	background-color: var(--clr-green);
+}
+
+.abandoned {
+	background-color: #ffc53d;
+}

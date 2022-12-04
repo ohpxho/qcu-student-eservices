@@ -15,17 +15,8 @@
 				'ovclass' => '',
 				'svclass' => 'hactive',
 				'apclass' => '',
-				'idclass' => '',
-				'borrowclass' => '',
-				'repairclass' => '',
-				'returnclass' => '',
-				'admissionclass' => '',
 				'acadclass' => '',
 				'lackclass' => '',
-				'councellingclass' => '',
-				'moralclass' => '',
-				'tuitionclass' => '',
-				'oopclass' => '',
 				'department' => 'registrar'
 			];
 
@@ -37,23 +28,28 @@
 
 			$data = [
 				'title' => SITENAME,
+				'err' => '',
+				'message' => '',
 				'ovclass' => '',
 				'svclass' => 'hactive',
+				'rqclass' => 'hactive',
 				'apclass' => '',
-				'idclass' => '',
-				'borrowclass' => '',
-				'repairclass' => '',
-				'returnclass' => '',
-				'admissionclass' => '',
 				'acadclass' => '',
+				'evalclass' => '',
 				'lackclass' => 'sactive',
-				'councellingclass' => '',
-				'moralclass' => '',
-				'tuitionclass' => '',
-				'oopclass' => '',
-				'department' => 'registrar'
+				'department' => 'registrar',
+				'records' => [],
+				'student' => [],
+				'canBorrow' => [],
+				'btnAppointmentState' => ''
 			];
 
+			$student = $this->studentModel->findStudentById($_SESSION['id']);
+
+			if(is_object($student)) {
+				$data['student'] = $student;
+			}
+			
 			$this->showView('registrar/lacking-documents', $data);
 		}
 
@@ -63,50 +59,59 @@
 			$data = [
 				'title' => SITENAME,
 				'ovclass' => '',
+				'err' => '',
+				'message' => '',
 				'svclass' => 'hactive',
+				'rqclass' => 'hactive',
 				'apclass' => '',
-				'idclass' => '',
-				'borrowclass' => '',
-				'repairclass' => '',
-				'returnclass' => '',
-				'admissionclass' => '',
 				'acadclass' => 'sactive',
 				'lackclass' => '',
-				'councellingclass' => '',
-				'moralclass' => '',
-				'tuitionclass' => '',
-				'oopclass' => '',
-				'department' => 'registrar'
+				'evalclass' => '',
+				'department' => 'registrar',
+				'records' => [],
+				'student' => [],
+				'canBorrow' => [],
+				'btnAppointmentState' => ''
 			];
 
+			$student = $this->studentModel->findStudentById($_SESSION['id']);
+
+			if(is_object($student)) {
+				$data['student'] = $student;
+			}
+			
 			$this->showView('registrar/academic-documents', $data);
 		}
 
-		public function doAdmission() {
+		public function doAccountEvaluation() {
 			redirectIfNotLoggedIn();
 
 			$data = [
 				'title' => SITENAME,
 				'ovclass' => '',
+				'err' => '',
+				'message' => '',
 				'svclass' => 'hactive',
+				'rqclass' => 'hactive',
 				'apclass' => '',
-				'idclass' => '',
-				'borrowclass' => '',
-				'repairclass' => '',
-				'returnclass' => '',
-				'admissionclass' => 'sactive',
 				'acadclass' => '',
+				'evalclass' => 'sactive',
 				'lackclass' => '',
-				'councellingclass' => '',
-				'moralclass' => '',
-				'tuitionclass' => '',
-				'oopclass' => '',
-				'department' => 'registrar'
+				'department' => 'registrar',
+				'records' => [],
+				'student' => [],
+				'canBorrow' => [],
+				'btnAppointmentState' => ''
 			];
 
-			$this->showView('registrar/admission', $data);
-		}
+			$student = $this->studentModel->findStudentById($_SESSION['id']);
 
+			if(is_object($student)) {
+				$data['student'] = $student;
+			}
+			
+			$this->showView('registrar/evaluation', $data);
+		}
 
 		public function doFilter() {
 			redirectIfNotLoggedIn();

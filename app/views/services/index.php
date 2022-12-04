@@ -17,7 +17,7 @@
 							</div>
 							<div class="service-option-desc-con">
 								<p>Office of Student Affairs and Services</p>
-								<p class="subtext flavor">e.g laptop borrowing, request university ID, etc.</p>
+								<p class="subtext flavor">i.e laptop borrowing, request university ID, etc.</p>
 							</div>
 						</div>	
 					</a>
@@ -29,7 +29,7 @@
 							</div>
 							<div class="service-option-desc-con">
 								<p>University Registrar</p>
-								<p class="subtext flavor">e.g admission, request academic documents, etc.</p>
+								<p class="subtext flavor">i.e admission, request academic documents, etc.</p>
 							</div>
 						</div>
 					</a>
@@ -40,8 +40,8 @@
 								<img src="<?php echo URLROOT; ?>/public/assets/img/guidance.png">
 							</div>
 							<div class="service-option-desc-con">
-								<p>Guidance and Councelling</p>
-								<p class="subtext flavor">e.g councelling, good moral certificate.</p>
+								<p>Guidance and Counseling</p>
+								<p class="subtext flavor">i.e counseling, good moral certificate.</p>
 							</div>
 						</div>
 					</a>
@@ -52,8 +52,32 @@
 								<img src="<?php echo URLROOT; ?>/public/assets/img/finance.png">
 							</div>
 							<div class="service-option-desc-con">
-								<p>Office of Finance</p>
-								<p class="subtext flavor">e.g tuition payment, request order of payment.</p>
+								<p>Finance And Accounting</p>
+								<p class="subtext flavor">i.e tuition payment, request order of payment.</p>
+							</div>
+						</div>
+					</a>
+
+					<a href="<?php echo URLROOT; ?>/library">
+						<div class="service-option-con">
+							<div class="service-option-icon-con">
+								<img src="<?php echo URLROOT; ?>/public/assets/img/library.png">
+							</div>
+							<div class="service-option-desc-con">
+								<p>Library And Information Services</p>
+								<p class="subtext flavor">i.e card application, online reference service, etc.</p>
+							</div>
+						</div>
+					</a>
+
+					<a href="<?php echo URLROOT; ?>/medical">
+						<div class="service-option-con">
+							<div class="service-option-icon-con">
+								<img src="<?php echo URLROOT; ?>/public/assets/img/medical.png">
+							</div>
+							<div class="service-option-desc-con">
+								<p>Medical And Dental Services</p>
+								<p class="subtext flavor">i.e online consultation.</p>
 							</div>
 						</div>
 					</a>

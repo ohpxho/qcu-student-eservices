@@ -1,7 +1,10 @@
 <?php
 
 	class Finance extends Controller {
-		
+		public function __construct() {
+			$this->studentModel = $this->initModel('Students');
+		}
+
 		public function doIndex() {
 			redirectIfNotLoggedIn();
 
@@ -9,16 +12,8 @@
 				'title' => SITENAME,
 				'ovclass' => '',
 				'svclass' => 'hactive',
+				'rqclass' => 'hactive',
 				'apclass' => '',
-				'idclass' => '',
-				'borrowclass' => '',
-				'repairclass' => '',
-				'returnclass' => '',
-				'admissionclass' => '',
-				'acadclass' => '',
-				'lackclass' => '',
-				'councellingclass' => '',
-				'moralclass' => '',
 				'tuitionclass' => '',
 				'oopclass' => '',
 				'department' => 'finance'
@@ -32,22 +27,26 @@
 
 			$data = [
 				'title' => SITENAME,
+				'err' => '',
+				'message' => '',
 				'ovclass' => '',
 				'svclass' => 'hactive',
+				'rqclass' => 'hactive',
 				'apclass' => '',
-				'idclass' => '',
-				'borrowclass' => '',
-				'repairclass' => '',
-				'returnclass' => '',
-				'admissionclass' => '',
-				'acadclass' => '',
-				'lackclass' => '',
-				'councellingclass' => '',
-				'moralclass' => '',
 				'tuitionclass' => '',
 				'oopclass' => 'sactive',
-				'department' => 'finance'
+				'department' => 'finance',
+				'records' => [],
+				'student' => [],
+				'canBorrow' => [],
+				'btnAppointmentState' => ''
 			];
+
+			$student = $this->studentModel->findStudentById($_SESSION['id']);
+			
+			if(is_object($student)) {
+				$data['student'] = $student;
+			}
 
 			$this->showView('finance/order-of-payment', $data);
 		}
@@ -57,22 +56,27 @@
 
 			$data = [
 				'title' => SITENAME,
+				'err' => '',
+				'message' => '',
 				'ovclass' => '',
 				'svclass' => 'hactive',
+				'rqclass' => 'hactive',
 				'apclass' => '',
-				'idclass' => '',
-				'borrowclass' => '',
-				'repairclass' => '',
-				'returnclass' => '',
-				'admissionclass' => '',
-				'acadclass' => '',
-				'lackclass' => '',
-				'councellingclass' => '',
-				'moralclass' => '',
 				'tuitionclass' => 'sactive',
 				'oopclass' => '',
-				'department' => 'finance'
+				'department' => 'finance',
+				'records' => [],
+				'student' => [],
+				'canBorrow' => [],
+				'btnAppointmentState' => ''
 			];
+
+			$student = $this->studentModel->findStudentById($_SESSION['id']);
+			
+			if(is_object($student)) {
+				$data['student'] = $student;
+			}
+			
 
 			$this->showView('finance/tuition', $data);
 		}
