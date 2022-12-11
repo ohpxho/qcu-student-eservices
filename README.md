@@ -1,4 +1,4 @@
-# qcu-student-eservices
+# QCU Student E-Services
 This is an online student services application for Quezon City University.
 
 Follow this steps to install and run the web application:
