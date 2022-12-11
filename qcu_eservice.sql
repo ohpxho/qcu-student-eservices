@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2022 at 05:46 PM
+-- Generation Time: Dec 11, 2022 at 04:39 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -46,7 +46,7 @@ CREATE TABLE `admin` (
   `fname` varchar(200) NOT NULL,
   `mname` varchar(200) DEFAULT NULL,
   `email` varchar(200) NOT NULL,
-  `department` int(10) NOT NULL,
+  `department` int(10) DEFAULT NULL,
   `contact` bigint(64) NOT NULL,
   `street` varchar(200) NOT NULL,
   `city` varchar(200) NOT NULL,
@@ -62,7 +62,8 @@ INSERT INTO `admin` (`id`, `lname`, `fname`, `mname`, `email`, `department`, `co
 (1298001, 'Queva', 'John', NULL, 'test1admin@gmail.com', 1, 912345678, 'Lili St.', 'Quezon City', 'Metro Manila', 1116),
 (1298002, 'Bonayon', 'Jerick', NULL, 'testa@gmail.com', 2, 9123456789, 'Rizal Sy.', 'Quezon City', 'Metro Manila', 1112),
 (1298003, 'Fernando', 'Jerry', 'Quizon', 'test3admin@gmail.com', 3, 9123456789, 'Roxas St.', 'Quezon City', 'Metro Manila', 1113),
-(1298004, 'Prada', 'Roy', NULL, 'test4@gmail.com', 4, 9123456789, 'Mimic St.', 'Quezon City', 'Metro Manila', 1233);
+(1298004, 'Prada', 'Roy', NULL, 'test4@gmail.com', 4, 9123456789, 'Mimic St.', 'Quezon City', 'Metro Manila', 1233),
+(1500001, 'Gueverra', 'Jhay Ar', NULL, 'system.admin@gmail.com', NULL, 9123456789, 'Gumamela St.', 'Quezon City', 'Metro Manila', 1113);
 
 -- --------------------------------------------------------
 
@@ -152,11 +153,14 @@ INSERT INTO `users` (`id`, `pass`, `email`, `type`, `pic`, `approve`, `block`, `
 (190830, '$2y$10$jLyDb2RghdFBLFsAdQ3ZXOukDPpwAgwAX6UMNbOldOaZ53sGXQXbK', 'lemuelso091@gmail.com', 'student', '', 0, 0, '2022-11-28 14:15:57'),
 (190833, '$2y$10$JBmQn4T9id3zmaBf/LCPyOG1nEVuUEqKlOEqFsx9QOm21.oMP86Tu', 'lemuelso002@gmail.com', 'student', '', 0, 0, '2022-11-26 20:50:40'),
 (190836, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'lemuelso001@gmail.com', 'student', '', 0, 0, '2022-11-26 20:56:17'),
-(190837, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'lemuel.k.costuna.so@gmail.com', 'student', '/public/assets/img/uploads/test.jpg', 1, 0, '2022-11-24 23:45:54'),
-(1298001, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'test1admin@gmail.com', 'osas', '/public/assets/img/uploads/channels4_profile.jpg', 1, 0, '2022-11-27 11:42:56'),
+(190837, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'lemuel.k.costuna.so@gmail.com', 'student', '', 1, 0, '2022-11-24 23:45:54'),
+(1298001, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'test1admin@gmail.com', 'osas', '', 1, 0, '2022-11-27 11:42:56'),
 (1298002, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'test2@gmail.com', 'registrar', '', 1, 0, '2022-11-27 11:42:56'),
 (1298003, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'test3admin@gmail.com', 'guidance', '', 1, 0, '2022-11-27 11:44:37'),
-(1298004, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'test4@gmail.com', 'finance', '', 1, 0, '2022-11-27 11:44:37');
+(1298004, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'test4@gmail.com', 'finance', '', 1, 0, '2022-11-27 11:44:37'),
+(1298005, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'test5@gmail.com', 'library', '', 1, 0, '2022-11-27 11:44:37'),
+(1298006, '$2y$10$NSAlHwF/vuSrYMMLAbG.PewBe3KTcja2TnwxhBPtyFYJy8cu05k8O', 'test6@gmail.com', 'medical', '', 1, 0, '2022-11-27 11:44:37'),
+(1500001, '$2y$10$jLyDb2RghdFBLFsAdQ3ZXOukDPpwAgwAX6UMNbOldOaZ53sGXQXbK', 'qcusuperadmin@gmail.com', 'sysadmin', '', 1, 0, '2022-12-08 21:02:32');
 
 --
 -- Indexes for dumped tables
