@@ -100,6 +100,32 @@
 	display: none;
 }
 
+/*****/
+.appointment-modal-con {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.appointment-modal {
+	width: fit-content;
+	background-color: white;
+	height: fit-content;
+	padding: 20px 15px;
+	border-radius: 10px;
+}
+
+.appointment-modal .form-group > a{
+	cursor: pointer;
+}
+
 @media(min-width: 0) {
 	.service-main-option-con {
 		width: 400px;

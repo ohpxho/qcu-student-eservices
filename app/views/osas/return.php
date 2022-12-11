@@ -33,7 +33,7 @@
 									<li>
 										<span class="std-srv-list-li-dropdown">Set Appointment<img src="<?php echo URLROOT; ?>/public/assets/img/arrowhead.png"/></span>
 										<div class="std-srv-list-content-con" data-li="details">
-											<form method="POST" action="<?php echo URLROOT; ?>/osas/Laptop Borrow">
+											<form method="POST" action="<?php echo URLROOT; ?>/osas/Laptop Return">
 												<div class="form-group">
 													<p class="subtext">The details below are in sync with the details registered. You can only change appointed date while request is at pending state.</p>
 												</div><br>
@@ -80,8 +80,25 @@
 													<input type="text" name="serial" value="">
 												</div><br>
 												<div class="form-group">
-													<p class="subtext">Make sure that you are available at the appointed date. If some circumtances occur please cancel immediately and state the reason to avoid getting blacklisted.</p>
-													<input style="margin-top: 5px"class="btn-default-style" type="submit" value="Set Appointment">
+													<p class="subtext">Make sure that you are available at the appointed date. If some circumtances occur please cancel immediately and state the reason to avoid getting blacklisted.</p><br>
+													<a style="margin-top: 10px" class="btn-default-style" id="set-app-btn" data-type="button">Set Appointment</a>
+												</div>
+
+												<div class="appointment-modal-con">
+													<div class="appointment-modal">
+														<div class="form-group">
+															<p class="header" style="font-weight: var(--fw-semi-bold)">Set Appointment</p>
+															<hr>
+															<?php
+																$calendar = new Calendar();
+																echo $calendar->show();
+															?>
+														</div>
+														<div class="form-group">
+															<input type="submit" style="margin-bottom: 0px" class="btn-default-style" value="Submit Request">
+															<a id="appointment-cancel-btn">Cancel</a>
+														</div>
+													</div>
 												</div>
 											</form>
 										</div>
@@ -122,6 +139,7 @@
 				endif;
 			?>
 		</div>
+		<script src="<?php echo URLROOT; ?>/public/script/services.js"></script>
 		<script src="<?php echo URLROOT; ?>/public/script/list-dropdown.js"></script>
 	</div>
 <?php

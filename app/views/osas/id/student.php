@@ -17,7 +17,7 @@
 				<li>
 					<span class="std-srv-list-li-dropdown">Send Request<img src="<?php echo URLROOT; ?>/public/assets/img/arrowhead.png"/></span>
 					<div class="std-srv-list-content-con" data-li="details">
-						<form method="POST" action="<?php echo URLROOT; ?>/osas/Laptop Borrow">
+						<form method="POST" action="<?php echo URLROOT; ?>/osas/Request University ID">
 							<div class="form-group">
 								<p class="subtext">The details below are in sync with the details registered.</p>
 							</div><br>

@@ -33,4 +33,13 @@ $(document).ready(function() {
 		if($(this).val() == 1) $('.form-group.beneficiary').css('display', 'block');
 		else $('.form-group.beneficiary').css('display', 'none');
 	}); 
+
+	//Set Appointment
+	$('#set-app-btn').click(function() {
+		$('.appointment-modal-con').css('display', 'flex');
+	});
+
+	$('#appointment-cancel-btn').click(function() {
+		$('.appointment-modal-con').css('display', 'none');
+	});
 });

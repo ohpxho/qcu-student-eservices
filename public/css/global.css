@@ -151,6 +151,7 @@ input[name="search"] {
 
 a[data-type="button"] {
  	padding: 3.5px 10px;
+ 	cursor: pointer;
  }
 
 hr {
