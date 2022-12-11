@@ -14,6 +14,7 @@
 				<div class="std-srv-content-dashboard-con" >
 					<div class="std-srv-form-con">
 						<p class="header">Library And Information Services</p>
+						<p class="dep-contact-text"><img src="<?php echo URLROOT; ?>/public/assets/img/mail.png"><a href="#">qcusasd@qcu.edu.ph</a></p>
 						<br>
 						<p class="dep-about-text">The University shall have a Library Board, the composition of which shall be determined by the University President. The Library Board shall promulgate policies, rules and regulations pertaining to acquisition of books and other learning resources as well as developmental programs of the University library.</span></p>
 						

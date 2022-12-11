@@ -141,6 +141,8 @@
 				'svclass' => '',
 				'apclass' => '',
 				'rqclass' => '',
+				'usrclass' => '',
+				'stdclass' => ''
 			];
 
 			$this->showView('home/overview', $data);
@@ -150,6 +152,7 @@
 			unset($_SESSION['id']);
 			unset($_SESSION['email']);
 			unset($_SESSION['fname']);
+			unset($_SESSION['lname']);
 			unset($_SESSION['type']);
 			unset($_SESSION['pic']);
 			unset($_SESSION);
@@ -163,10 +166,13 @@
 				$student = $this->studentModel->findStudentById($user->id);
 				print($student->fname);
 				$_SESSION['fname'] = $student->fname;		
+				$_SESSION['lname'] = $student->lname;
 			} else {
 				$admin = $this->adminModel->findAdminById($user->id);
 				$_SESSION['fname'] = $admin->fname;	
+				$_SESSION['lname'] = $admin->lname;
 			}
+
 			$_SESSION['type'] = $user->type;
 			$_SESSION['pic'] = $user->pic;
 		}

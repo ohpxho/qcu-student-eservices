@@ -14,6 +14,7 @@
 				<div class="std-srv-content-dashboard-con" >
 					<div class="std-srv-form-con">
 						<p class="header">Medical And Dental Services</p>
+						<p class="dep-contact-text"><img src="<?php echo URLROOT; ?>/public/assets/img/mail.png"><a href="#">qcusasd@qcu.edu.ph</a></p>
 						<br>
 						<p class="dep-about-text">The SCHOOL CLINIC is responsible for safe-guarding the health of the students and employees of Quezon City University.</span></p>
 						

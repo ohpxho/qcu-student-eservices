@@ -18,12 +18,12 @@
 
 
 .hm-login-form-head-con {
-	color: var(--clr-accent);
-	font-size: var(--fs-600);
 	display: flex;
-	font-weight: var(--fw-semi-bold);
 	flex-direction: column;
-	width: 100%
+	width: 100%;
+	color: var(--clr-accent);
+	font-size: var(--fs-heading);
+	font-weight: var(--fw-semi-bold);
 }
 
 .hm-login-form-head-con hr{
@@ -273,6 +273,191 @@
 }
 
 /*** overview ***/
+.overview-con {
+	width: 100%;
+	height: 100%;
+}
+
+.overview-welcome-con {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--clr-light-bland);
+	border-bottom: 1px solid var(--border-clr);
+}
+
+.overview-welcome-header-con {
+}
+
+.overview-welcome-header-con > .header {
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+	font-weight: var(--fw-regular);
+	font-size: var(--fs-800) !important;
+	color: var(--clr-accent);
+}
+
+.overview-welcome-header-con > .header > img {
+	position: absolute;
+	left: -70px;
+	width: 60px;
+	height: 60px;
+}
+
+.overview-welcome-subheader {
+	text-align: right;
+	margin-top: 10px;
+}
+
+.typewriter {
+	width: 100%;
+	text-align: center;
+	margin-top: 60px;
+	font-size: var(--fs-700);
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 15s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 5px solid var(--ff-clr-secondary);
+  animation: blink 0.5s linear infinite;
+}
+
+@keyframes typing {
+  0%, 9.300% { content: ""; }
+  0.700%, 8.600% { content: "O"; }
+  1.400%, 7.900% { content: "OS"; }
+  2.100%, 6.200% { content: "OSA"; }
+  3.800%, 5.500% { content: "OSAS"; }
+
+  11%, 29.300% { content: ""; }
+  11.700%, 28.600% { content: "R"; }
+  12.400%, 27.900% { content: "RE"; }
+  13.100%, 26.200% { content: "REG"; }
+  14.800%, 25.500% { content: "REGI"; }
+  15.500%, 24.800% { content: "REGIS"; }
+  16.200%, 23.100% { content: "REGIST"; }
+  17.900%, 22.400% { content: "REGISTR"; }
+  18.600%, 21.700% { content: "REGISTRA"; }
+  19.300%, 21% { content: "REGISTRAR"; }
+
+  31%, 46.500% { content: ""; }
+  31.700%, 45.800% { content: "G"; }
+  32.400%, 44.100% { content: "GU"; }
+  33.900%, 43.400% { content: "GUI"; }
+  34.600%, 42.700% { content: "GUID"; }
+  35.300%, 42% { content: "GUIDA"; }
+  36%, 41.300% { content: "GUIDAN"; }
+  36.700%, 40.600% { content: "GUIDANC"; }
+  37.400%, 39.900% { content: "GUIDANCE"; }
+
+  48.200%, 62.700% { content: ""; }
+  49.900%, 62% { content: "F"; }
+  50.600%, 61.300% { content: "FI"; }
+  51.300%, 60.600% { content: "FIN"; }
+  52%, 59.900% { content: "FINA"; }
+  52.700%, 58.200% { content: "FINAN"; }
+  53.400%, 57.500% { content: "FINANC"; }
+  54.100%, 56.800% { content: "FINANCE"; }
+
+  64.400%, 79.900% { content: ""; }
+  65.100%, 78.200% { content: "L"; }
+  66.800%, 77.500% { content: "LI"; }
+  67.500%, 76.800% { content: "LIB"; }
+  68.200%, 75.100% { content: "LIBR"; }
+  69.900%, 74.400% { content: "LIBRA"; }
+  70.600%, 73.700% { content: "LIBRAR"; }
+  71.300%, 73% { content: "LIBRARY"; }
+  
+  81.600%, 92.700% { content: ""; }
+  82.300%, 92% { content: "C"; }
+  83%, 91.300% { content: "CL"; }
+  83.700%, 90.600% { content: "CLI"; }
+  84.400%, 89.900% { content: "CLIN"; }
+  85.100%, 89.200% { content: "CLINI"; }
+  86.800%, 88.500% { content: "CLINIC"; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/*** overview statistics ***/
+.overview-statistics-con {
+	width: 100%;
+	height: auto;
+	padding: 20px 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.overview-statistics-count-con {
+	width: 70%;
+	display: flex;
+}
+
+.overview-count-con {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 10px;
+	column-gap: 10px;
+	margin-top: 10px;
+}
+
+.overview-count-panel-con {
+	display: flex;
+	width: 48%;
+	height: 50px;
+	border: 1px solid var(--border-clr);
+}
+
+.overview-count-box-con {
+	height: 50px;
+	width: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.overview-count-box-con > p{
+	color: white;
+}
+
+.overview-title-box-con {
+	display: flex;
+	align-items: center;
+}
+
+.overview-title-box-con > p{
+	margin-left: 10px;
+}
+
+.overview-statistics-graph-con {
+	width: 35%;
+}
+
+.overview-status-list {
+	width: 100%;
+	margin-top: 10px;
+}
+
+.overview-status-list > ul {
+	list-style-type: none;
+}
+
+.overview-status-list > ul > li{
+	margin-top: 10px;
+}
 
 @media(min-width: 0) {
 	.hm-login-con {
@@ -298,20 +483,20 @@
 }
 
 @media(min-width: 576px) {
+	
 }
 
 @media(min-width: 900px) {
 	.hm-login-con {
 		width: 50%;
 		justify-content: center;
-		align-items: center;
-		padding-left: 10px;
-		margin-top: 0;
+		padding-left: 0;
+		margin-top: 40px;
 	}
 
 	.hm-login-form-con {
-		height: 500px;
-		width: 500px;
+		height: 550px;
+		width: 550px;
 	}
 
 	.hm-cover-con {

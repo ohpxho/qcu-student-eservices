@@ -1,8 +1,8 @@
 
 $(document).ready(function() {
-	$('.std-srv-list-li-dropdown').click(function() {
+	$('.snav-list-dep-dropdown').click(function() {
 		if($(this).next().height() <= 0) {
-			$('.std-srv-list-li-dropdown').each(function() {
+			$('.snav-list-dep-dropdown').each(function() {
 				$(this).children('img').css('transform', 'rotate(0deg)');
 				$(this).next().height(0);
 			}); 
@@ -12,6 +12,5 @@ $(document).ready(function() {
 			$(this).children('img').css('transform', 'rotate(0deg)');
 			$(this).next().height(0);
 		}
-	});
-
+	});  
 });

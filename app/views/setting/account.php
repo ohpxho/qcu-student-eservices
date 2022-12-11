@@ -1,16 +1,19 @@
 <?php
 	require APPROOT.'/views/includes/header.php';
-	require APPROOT.'/views/includes/h-navigation.php';
+	require APPROOT.'/views/includes/h-navigation.php';	
 ?>
-	<main role="main">
-		<div class="profile-setting-con">
+	<div class="setting-main-con">
+		<?php
+			require APPROOT.'/views/includes/settings-navigation.php';
+		?>
+		<div class="setting-con">
 			<div>
-				<p class="header">User Profile</p>
-				<hr/><br/>
+				<p class="header">Account Details</p>
+				<hr>
 				<?php
 					if(!empty($data['sucess'])):
 				?>
-						<div class="wrpane-con success"><p><?php echo $data['sucess']; ?></p></div><br />
+						<div class="wrpane-con success" style="margin-top: 0 !important"><p><?php echo $data['sucess']; ?></p></div>
 				<?php
 					endif;
 				?>
@@ -18,15 +21,14 @@
 				<?php
 					if(!empty($data['err'])):
 				?>
-						<div class="wrpane-con error"><p><?php echo $data['err']; ?></p></div><br />
+						<div class="wrpane-con error" style="margin-top: 0 !important"><p><?php echo $data['err']; ?></p></div>
 				<?php
 					endif;
 				?>
-
 				<p class="profile-id">#<?php echo $_SESSION['id']; ?></p>
 				<span class="profile-subtext">ID is fixed and cannot be edited.</span>
 				<br /><br/>
-				<form action="<?php echo URLROOT; ?>/user/profile" method="POST" enctype="multipart/form-data">
+				<form action="<?php echo URLROOT; ?>/setting/account" method="POST" enctype="multipart/form-data">
 					
 					<div class="form-group">
 						<div>
@@ -86,7 +88,8 @@
 				</form>
 			</div>
 		</div>	
-	</main>
+	</div>
+
 <?php
 	require APPROOT.'/views/includes/footer.php';
 ?>

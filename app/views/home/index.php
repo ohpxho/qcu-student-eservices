@@ -43,8 +43,10 @@
 							<a class="create-acc-link" href="<?php echo URLROOT; ?>/home/registration" >Create Account</a>
 							<a class="forgot-pass-link" href="#">Forgot password?</a>
 						</div>
+						<p><span style="font-weight: var(--fw-semi-bold)">NOTE:</span> This website is only for QCU students and personnel only.</p><br>
+						<p><span style="font-weight: var(--fw-semi-bold)">NOTE:</span> Students are required to register before qualifying to use the services.</p>
 					</form>
-					<p>*For alumni, please tap this button <a href="<?php echo URLROOT; ?>/alumni" class="login-alumni-btn" data-type="button">Login As Alumni</a></p><br>
+					<br>
 				</div>
 			</div>
 		

@@ -14,7 +14,7 @@
 				<div class="std-srv-content-dashboard-con" >
 					<div class="std-srv-form-con">
 						<p class="header">University Registrar</p>
-						<br>
+						<p class="dep-contact-text"><img src="<?php echo URLROOT; ?>/public/assets/img/mail.png"><a href="#">qcusasd@qcu.edu.ph</a></p><br>
 						<p class="dep-about-text">The Registrar’s Office bond to provide outstanding academic and support services to the students, faculty, staff, and alumni in the baseline of institutional and legal standards. The Office of the Registrar stipulates and maintains students academic records in an accurate and timely information without compromising the integrity and security of student data.</p><br>
 						<p>The office performs various academic transactions in compliance with the policies and guidelines primed by the Higher Education Institution. The Office of the Registrar strives to improve processes and procedures using the modern technological resources align to the Vision and Mission of the University.</p>
 						<!--<p class="dep-contact-text"><img src="<?php echo URLROOT; ?>/public/assets/img/phone.png">+6388063165</p>

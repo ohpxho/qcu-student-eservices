@@ -4,8 +4,8 @@
 			<img src="<?php echo URLROOT.'/public/assets/img/logo.png' ?>" />
 		</div>
 		<div class="h-nav-title-con">
-			<a href="<?php echo URLROOT; ?>/home"><p>Quezon City University</p></a>
-			<p>Student E-Services</p>
+			<a href="<?php echo URLROOT; ?>/home"><p>QUEZON CITY UNIVERSITY</p></a>
+			<p>STUDENT E-SERVICES</p>
 		</div>
 	</div>
 
@@ -22,7 +22,7 @@
 						<?php
 							if(whoIsIn() == 'student'):
 						?>	
-								<a href="<?php echo URLROOT; ?>/service"><li class="<?php echo $data['svclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/services.png" /> Services</li></a>
+								<a href="<?php echo URLROOT; ?>/service"><li class="<?php echo $data['svclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/request.png" /> Services</li></a>
 						<?php
 							endif;
 						?>
@@ -30,12 +30,29 @@
 						<?php
 							if(whoIsIn() != 'student'):
 						?>	
-								<a href="<?php echo URLROOT; ?>/request"><li class="<?php echo $data['rqclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/services.png" />Student Requests</li></a>
+								<a href="<?php echo URLROOT; ?>/request"><li class="<?php echo $data['rqclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/request.png" />Student Requests</li></a>
 						<?php
 							endif;
 						?>
 
 						<a href="<?php echo URLROOT; ?>/appointment"><li class="<?php echo $data['apclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/appointment.png"/> Appointments</li></a>
+
+						<?php
+							if(whoIsIn() != 'student' && whoIsIn() != 'sysadmin'):
+						?>	
+								<a href="<?php echo URLROOT; ?>/student"><li class="<?php echo $data['stdclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/user.png" />Student Records</li></a>
+						<?php
+							endif;
+						?>
+
+						<?php
+							if(whoIsIn() == 'sysadmin'):
+						?>	
+								<a href="<?php echo URLROOT; ?>/user/student"><li class="<?php echo $data['usrclass']; ?>"><img src="<?php echo URLROOT; ?>/public/assets/img/user.png" />System Users</li></a>
+						<?php
+							endif;
+						?>
+
 				<?php
 					endif;
 				?>
@@ -61,7 +78,7 @@
 					<div class="prof-md-arrow"></div>
 				</button>
 				<div class="h-nav-profile-md-con">
-					<a href="<?php echo URLROOT; ?>/user/profile"><img src="<?php echo URLROOT; ?>/public/assets/img/profile.png"><span>Profile Setting</span></a>
+					<a href="<?php echo URLROOT; ?>/setting/account"><img src="<?php echo URLROOT; ?>/public/assets/img/setting.png"><span>Settings</span></a>
 					<a href="<?php echo URLROOT;?>/home/logout"><img src="<?php echo URLROOT; ?>/public/assets/img/logout.png"><span>Logout</span></a>
 				</div>
 			</div>

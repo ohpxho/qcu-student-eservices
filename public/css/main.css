@@ -78,14 +78,16 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: left;
-	line-height: 1.2em;
+	line-height: 1.5em;
 }
 
 .h-nav-title-con p:nth-child(1) {
 	color: var(--clr-accent);
+	white-space: nowrap;
 }
 
 .h-nav-title-con p:nth-child(2) {
+	white-space: nowrap;
 	font-size: var(--fs-secondary);
 }
 
@@ -181,7 +183,7 @@
 
 /*** service content ***/
 
-.dep-service-main-con {
+.dep-service-main-con, .setting-main-con {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -195,21 +197,21 @@
 }
 
 /*** side navigation ***/
-.s-nav {
+.s-nav, .setting-nav, .user-nav {
 	position: sticky;
 	top: 0;
 	height: 100%;
 }
 
-.s-nav-list {
+.s-nav-list, .setting-nav-list, .user-nav-list {
 	width: 100%;
 }
 
-.s-nav-list li{
+.s-nav-list li, .setting-nav-list > li{
 	padding: 10px;
 }
 
-.s-nav-list a li {
+.s-nav-list a li, .setting-nav-list a li, .user-nav-list a li {
 	display: flex;
 	align-items: center;
 }
@@ -231,6 +233,37 @@
 .s-nav-list > li:nth-child(1) img{
 	margin-right: 15px;
 	width: 40px;
+	height: auto;
+}
+
+.snav-list-dep-dropdown {
+	display: flex;
+	align-items: center;
+	font-weight: var(--fw-semi-bold);
+	padding-left: 20px !important;
+}
+
+.snav-list-dep-dropdown:hover {
+	background-color: var(--border-clr);
+	cursor: pointer;
+}
+
+.snav-list-dep-dropdown > img {
+	width: 20px;
+	height: 20px;
+	margin-left: auto;
+}
+
+.snav-list-dep-dropdown-list {
+	height: 0;
+	overflow: hidden;
+}
+
+.snav-list-dep-dropdown.active > img {
+	transform: rotate(90deg);
+}
+
+.snav-list-dep-dropdown-list.active {
 	height: auto;
 }
 
@@ -285,7 +318,39 @@
     }
 }
 
+/*** settings ***/
+
+.setting-pic-holder{
+	width: 150px;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.setting-pic-holder > img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+}
+
+.setting-nav-list > li:nth-child(1) > p {
+	font-weight: var(--fw-semi-bold);
+	font-size: var(--fs-heading);
+	margin-bottom: 10px;
+}
+
 /*** footer ***/
+
+/*** user side navigation  ***/
+.user-nav-list > li:nth-child(1) {
+	padding: 10px;
+	padding-left: 20px;
+	font-weight: var(--fw-semi-bold);
+	border-bottom: 1px solid var(--border-clr);
+}
 
 @media(min-width: 0) {
 
@@ -402,18 +467,18 @@
 		background-color: var(--clr-light-accent);
 	}
 
-	.s-nav {
+	.s-nav, .setting-nav, .user-nav {
 		min-width: fit-content;
 		background-color: var(--clr-accent);
 		border-right: 0;
 	}
 
-	.s-nav-list a > li{
+	.s-nav-list a > li, .setting-nav-list a > li, .user-nav-list a > li{
 		text-indent: -9999px;
 		padding: 10px;
 	}
 
-	.s-nav-list a li:hover{
+	.s-nav-list a li:hover, .setting-nav-list a li:hover{
 		background-color: var(--clr-light-accent);
 	}
 
@@ -523,8 +588,8 @@
 		align-items: center;
 	}
 
-	.h-nav-profile-md-con a:nth-child(1) {
-		border-bottom: 1px solid var(--border-clr);
+	.h-nav-profile-md-con a:not(:nth-child(1)) {
+		border-top: 1px solid var(--border-clr);
 	}
 	
 	#h-nav-hamburger-btn {
@@ -550,23 +615,24 @@
 		left: 0
 	}
 
-	.s-nav {
+	.s-nav, .setting-nav, .user-nav {
 		background-color: white;
 		min-width: 280px;
+		max-width: 280px;
 		border-right: 1px solid var(--border-clr);
 	}
 
-	.s-nav-list a li{
+	.s-nav-list a li, .setting-nav-list a li, .user-nav-list a li{
 		text-indent: 0;
 		padding-left: 20px;
 		
 	}
 
-	.s-nav-list a li:hover{
+	.s-nav-list a li:hover, .setting-nav-list a li:hover, .user-nav-list a li:hover{
 		background-color: var(--border-clr);
 	}
 
-	.s-nav-list a li:not(.sactive):hover::before {
+	.s-nav-list a li:not(.sactive):hover::before, .setting-nav-list a li:not(.sactive):hover::before {
 		position: absolute;
 		content: '';
 		left: 0;
@@ -577,8 +643,15 @@
 		animation-fill-mode: forwards;
 	}
 
-	.s-nav-list > li:nth-child(1) {
+	.s-nav-list > li:nth-child(1), .setting-nav-list > li:nth-child(1) {
 		border-bottom: 1px solid var(--border-clr);
+	}
+
+	.setting-nav-list > li:nth-child(1) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 10px;
 	}
 
 	.s-nav-list > li:nth-child(1) img{

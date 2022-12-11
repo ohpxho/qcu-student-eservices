@@ -1,0 +1,154 @@
+/*** Profile Setting ***/
+
+.setting-con {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.setting-con > div > form {
+	width: 90%;
+}
+
+.setting-con > div {
+	width: 900px;
+	padding: 10px;
+	padding-top: 50px;
+}
+
+.setting-con > div > .header{
+	font-size: var(--fs-600);
+	margin-bottom: 15px;
+	font-weight: var(--fw-semi-bold);
+}
+
+.profile-id {
+	font-size: var(--fs-heading);
+	font-weight: var(--fw-semi-bold);
+}
+
+.profile-subtext {
+	font-size: var(--fs-secondary);
+}
+
+.setting-con > div > form .form-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.setting-con > div > form > .form-group:nth-child(1) {
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+.setting-con > div > form > .form-group:nth-child(1) img{
+	width: 70px;
+	height: auto;
+}
+
+.setting-con > div > form > .form-group:nth-child(1) > div:nth-child(1) {
+	margin-right: 20px;
+}
+
+.setting-con > div > form > .form-group:nth-child(1) > div:nth-last-child(1) {
+	display: flex;
+	flex-direction: column;
+}
+
+.setting-con > div > form .form-group > span {
+	margin: 3px 0 ;
+}
+
+.setting-con > div > form .form-group > input[type="text"] {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.setting-con > div > form button {
+	background-color: var(--clr-err);
+	color: white;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.setting-con > div > form > input[type="submit"] {
+	background-color: var(--clr-accent);
+	color: white;
+}
+
+.change-pass-btn-con {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+	align-items: flex-start;
+}		
+
+.change-pass-btn-con > div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.change-pass-btn-con > div > span > img{
+	width: 20px;
+	height: 20px;
+	display: none;
+}
+
+
+.change-pass-form {
+	display: none;
+}
+
+/*** services ***/
+
+.srv-setting-con {
+	display: flex;
+	overflow-y: scroll;
+	height: 500px;
+}
+
+.srv-setting-list-con {
+	width: 30%;
+	padding: 10px;
+	height: 100%;
+}
+
+.srv-setting-list-con > ul{
+	list-style-type: none;
+}
+
+.srv-setting-list-con > ul > li{
+	padding: 10px;
+	cursor: pointer;
+}
+
+.srv-setting-list-con > ul > li:hover{
+	background-color: var(--border-clr);
+}
+
+.srv-setting-calendar-con {
+	width: 70%;
+	padding: 10px;
+	height: fit-content;
+	border-left: 1px solid var(--border-clr);
+}
+
+.srv-setting-calendar-con > .form-group {
+	margin-left: 10px;
+}
+
+@media(min-width: 0) {
+
+
+}
+
+@media(min-width: 576px) {
+	
+}
+
+@media(min-width: 900px) {
+	
+}

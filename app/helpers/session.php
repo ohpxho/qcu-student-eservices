@@ -23,7 +23,7 @@
 		if(!empty($user)) {
 			if($user == 'student') {
 				header('location:'.URLROOT.'/home/overview');
-			} elseif($user == 'admin') {
+			} elseif($user == 'sysadmin') {
 				header('location:'.URLROOT.'/home/overview');
 			} else {
 				header('location:'.URLROOT.'/home/overview');

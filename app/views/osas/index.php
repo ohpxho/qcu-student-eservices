@@ -14,6 +14,7 @@
 				<div class="std-srv-content-dashboard-con" >
 					<div class="std-srv-form-con">
 						<p class="header">Office Of Student Affairs And Assistance</p>
+						<p class="dep-contact-text"><img src="<?php echo URLROOT; ?>/public/assets/img/mail.png"><a href="#">qcusasd@qcu.edu.ph</a></p>
 						<br>
 						<p class="dep-about-text">The Quezon City University Student Affairs and Services Division provides and offers opportunities for students to participate in any educational and social activities in and out of the classroom. It shall take care of specific educational services to students to enable them to have a deeper understanding of themselves, the school and their community.</p>
 						<!--<p class="dep-contact-text"><img src="<?php echo URLROOT; ?>/public/assets/img/phone.png">+6388063165</p>

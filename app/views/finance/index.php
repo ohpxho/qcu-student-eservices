@@ -14,6 +14,7 @@
 				<div class="std-srv-content-dashboard-con" >
 					<div class="std-srv-form-con">
 						<p class="header">Finance And Accounting</p>
+						<p class="dep-contact-text"><img src="<?php echo URLROOT; ?>/public/assets/img/mail.png"><a href="#">qcusasd@qcu.edu.ph</a></p>
 						<br>
 						<p class="dep-about-text">The Quezon City University Office Of Finance And Accounting is the part of an organization that is responsible for acquiring funds for the firm, managing funds within the organization and planning for the expenditure of funds on various assets. It is the part of an organization that ensures efficient financial management and financial control necessary to support all business activities.</p>
 						<!--<p class="dep-contact-text"><img src="<?php echo URLROOT; ?>/public/assets/img/phone.png">+6388063165</p>

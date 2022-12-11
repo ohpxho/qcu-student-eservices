@@ -14,6 +14,8 @@
 				'ovclass' => '',
 				'svclass' => 'hactive',
 				'apclass' => '',
+				'usrclass' => '',
+				'stdclass' => '',
 				'idclass' => '',
 				'borrowclass' => '',
 				'repairclass' => '',

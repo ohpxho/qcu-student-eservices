@@ -1,27 +1,24 @@
 <?php
 
-	class Appointment extends Controller {
-		
+	class Student extends Controller {
 		public function __construct() {
 
 		}
 
-		public function doindex() {
+		public function doIndex() {
 			redirectIfNotLoggedIn();
 
 			$data = [
 				'title' => SITENAME,
 				'ovclass' => '',
 				'svclass' => '',
-				'apclass' => 'hactive',
+				'apclass' => '',
 				'rqclass' => '',
 				'usrclass' => '',
-				'stdclass' => ''
+				'stdclass' => 'hactive'
 			];
 
-			$this->showView('appointment/index',$data);
+			$this->showView('/student/index', $data);
 		}
 	}
-
-
 ?>

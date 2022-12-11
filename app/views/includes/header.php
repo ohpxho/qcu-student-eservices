@@ -7,9 +7,11 @@
 	<title><?php echo $data['title'] ?></title>
 	<link rel="icon" href="<?php echo URLROOT; ?>/public/assets/img/logo.png" />
 	<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/global.css" />
+	<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/calendar.css" />
 	<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/main.css" />	
 	<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/home.css" />	
-	<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/user.css" />
+	<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/user.css" />	
+	<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/setting.css" />
 	<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/dashboard.css" />
 	<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/services.css" />	
 	<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/alumni.css" />	

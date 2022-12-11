@@ -14,6 +14,7 @@
 				<div class="std-srv-content-dashboard-con" >
 					<div class="std-srv-form-con">
 						<p class="header">Guidance And Counseling Unit</p>
+						<p class="dep-contact-text"><img src="<?php echo URLROOT; ?>/public/assets/img/mail.png"><a href="#">qcusasd@qcu.edu.ph</a></p>
 						<br>
 						<p class="dep-about-text">The Guidance and Counseling Unit (GCU) operates under the vision and mission of the university. It helps students facing major challenges and assist them to know their capabilities to resolve own problems. It aims to guide students on their holistic development to establish academic goals, career path and personal adjustments.</p>
 						<!--<p class="dep-contact-text"><img src="<?php echo URLROOT; ?>/public/assets/img/phone.png">+6388063165</p>

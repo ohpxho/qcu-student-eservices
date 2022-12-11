@@ -14,6 +14,8 @@
 				'title' => SITENAME,
 				'ovclass' => '',
 				'svclass' => 'hactive',
+				'usrclass' => '',
+				'stdclass' => '',
 				'apclass' => '',
 				'acadclass' => '',
 				'lackclass' => '',
